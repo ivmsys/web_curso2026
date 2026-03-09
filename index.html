@@ -171,6 +171,51 @@
                 font-size: 16px;
             }
         }
+        /* --- NUEVOS ESTILOS PARA VENUE Y SPONSORS --- */
+        .venue-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap; /* Para que se adapte en celulares */
+        }
+        .venue-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        .venue-building-img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .venue-map {
+            flex: 1.2;
+            min-width: 300px;
+            min-height: 400px;
+        }
+        .venue-map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border-radius: 8px;
+            border: 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .sponsors-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .sponsor-item img {
+            max-height: 100px;
+            max-width: 200px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -299,8 +344,52 @@
 
 <section id="contact">
     <h2>Venue & Contact</h2>
-    <p>The summer school will be held at the <strong>Multipurpose Room – CeTIDi</strong> (Center for Transdisciplinary Research, Development and Innovation) at <strong>Universidad La Salle Mexico, Mexico City</strong>.  The programme will be conducted in English.  Directions and campus maps will be provided to registered participants.</p>
-    <p>For inquiries or registration, please email <a href="mailto:ccrs2026@lasalle.mx">ccrs2026@lasalle.mx</a>.</p>
+    <div class="venue-content">
+        <div class="venue-info">
+            <img src="hero.png" alt="Universidad La Salle" class="venue-building-img">
+            <h3>Universidad La Salle Mexico</h3>
+            <p><strong>Multipurpose Room – CeTIDi</strong></p>
+            <p>Center for Transdisciplinary Research, Development and Innovation</p>
+            <p>Mexico City, Mexico</p>
+            <p style="margin-top: 15px;"><strong>Contact Inquiries:</strong> <br> <a href="mailto:ccrs2026@lasalle.mx">ccrs2026@lasalle.mx</a></p>
+        </div>
+        <div class="venue-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.6617061730595!2d-99.18465928509355!3d19.4054451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff5a4d754b2b%3A0x6b49e3599d638dc5!2sUniversidad%20La%20Salle%20Ciudad%20de%20M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1710000000000!5m2!1ses-419!2smx" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                style="border:0; width:100%; height:100%; min-height:400px; border-radius:8px;">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<section id="sponsors">
+    <h2>Event Sponsors & Organizers</h2>
+    <div class="sponsors-grid">
+        <div class="sponsor-item">
+            <img src="Logo_LaSalle.png" alt="Universidad La Salle">
+        </div>
+        <div class="sponsor-item">
+            <img src="Logo_CNRS.jpg" alt="CNRS">
+        </div>
+        <div class="sponsor-item">
+            <img src="Logo_LIRMM.jpg" alt="LIRMM">
+        </div>
+        <div class="sponsor-item">
+            <img src="Logo_UniMontpellier.jpg" alt="University of Montpellier">
+        </div>
+        <div class="sponsor-item">
+            <img src="Logo_CINVESTAV.png" alt="CINVESTAV">
+        </div>
+        <div class="sponsor-item">
+            <img src="Logo_DCA.jpg" alt="DCA">
+        </div>
+        <div class="sponsor-item">
+            <img src="Logo_RedLate.png" alt="RedLate">
+        </div>
+    </div>
 </section>
 
 <div class="footer">
