@@ -3,394 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCRS 2026 – Summer School on Control of Complex Robotic Systems</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.5;
-            color: #333;
-        }
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #002F5F;
-            color: #fff;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav li {
-            margin: 0;
-        }
-        nav a {
-            display: block;
-            padding: 15px 20px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        nav a:hover {
-            background: #004a87;
-        }
-        /* Hero section */
-        header {
-            height: 70vh;
-            background-image: url('hero.png');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            position: relative;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-        }
-        header .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        header h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-        header h2 {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            background: #E00034;
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .btn:hover {
-            background: #b20028;
-        }
-        /* Section styling */
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #002F5F;
-        }
-        .committee-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .committee-list .member {
-            flex: 1 1 45%;
-            margin-bottom: 15px;
-        }
-        .committee-list strong {
-            display: block;
-            font-size: 16px;
-            color: #002F5F;
-        }
-        table.schedule {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        table.schedule th, table.schedule td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        table.schedule th {
-            background: #002F5F;
-            color: #fff;
-            text-align: left;
-        }
-        table.schedule tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-        .abstracts ul {
-            list-style: disc inside;
-            padding-left: 20px;
-        }
-        .panel-list ul {
-            list-style: disc inside;
-            padding-left: 20px;
-        }
-        .footer {
-            background: #002F5F;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .photo-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-        .photo-gallery img {
-            width: 180px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-        @media (max-width: 600px) {
-            nav ul {
-                flex-wrap: wrap;
-            }
-            nav a {
-                padding: 10px 15px;
-            }
-            header h1 {
-                font-size: 28px;
-            }
-            header h2 {
-                font-size: 16px;
-            }
-        }
-        /* --- NUEVOS ESTILOS PARA VENUE Y SPONSORS --- */
-        .venue-content {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            flex-wrap: wrap; /* Para que se adapte en celulares */
-        }
-        .venue-info {
-            flex: 1;
-            min-width: 300px;
-        }
-        .venue-building-img {
-            width: 100%;
-            max-height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .venue-map {
-            flex: 1.2;
-            min-width: 300px;
-            min-height: 400px;
-        }
-        .venue-map iframe {
-            width: 100%;
-            height: 100%;
-            min-height: 400px;
-            border-radius: 8px;
-            border: 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .sponsors-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 20px;
-        }
-        .sponsor-item img {
-            max-height: 100px;
-            max-width: 200px;
-            object-fit: contain;
-        }
-    </style>
+    <title>CCRS 2026 - Control of Complex Robotic Systems</title>
+    <meta name="description" content="The Third Summer School on Control of Complex Robotic Systems (CCRS 2026) at Universidad La Salle Mexico.">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#committee">Committee</a></li>
-        <li><a href="#programme">Programme</a></li>
-        <li><a href="#keynote">Keynote</a></li>
-        <li><a href="#panel">Panel</a></li>
-        <li><a href="#poster">Poster</a></li>
-        <li><a href="#photo">Photo</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<header id="home">
-    <div class="hero-content">
-        <h1>Third Summer School on Control of Complex Robotic Systems</h1>
-        <h2>16 – 19 June 2026 · Universidad La Salle Mexico City</h2>
-        <p>Enhancing competencies in motion control for complex robotic platforms</p>
-        <a href="#contact" class="btn">Register</a>
-    </div>
-</header>
-
-<section id="committee">
-    <h2>Committee</h2>
-    <div class="committee-list">
-        <div class="member"><strong>Hipolito Aguilar Sierra</strong>Universidad La Salle Mexico – Local organizer & demonstration lead</div>
-        <div class="member"><strong>Dr Ahmed Chemori</strong>LIRMM, CNRS/University of Montpellier – Co‑organizer & main lecturer</div>
-        <div class="member"><strong>Nestor Anaya Marín</strong>Rector, Universidad La Salle Mexico – Opening ceremony</div>
-        <div class="member"><strong>Mélie Cornet</strong>French Embassy in Mexico – Scientific Attaché</div>
-        <div class="member"><strong>Eduardo Gómez Ramírez</strong>Vice‑Rector for Research, Universidad La Salle Mexico</div>
-        <div class="member"><strong>Sabine Mondie</strong>Head of Automatic Control Department, CINVESTAV</div>
-        <div class="member"><strong>Dr Mauricio Corona Chavez</strong>La Salle alumnus – Industry perspectives lecture</div>
-        <div class="member"><strong>Dr Moisés Alencastre Miranda</strong>La Salle alumnus – Technology transfer lecture</div>
-    </div>
-    <p>We acknowledge additional support from Dr Jorge Antonio Torres Muñoz, Dr Sabine Mondie, and Dr Juan Manuel Ibarra Zannatha.</p>
-</section>
-
-<section id="programme">
-    <h2>Programme</h2>
-    <p>The summer school runs over four days, combining lectures, poster sessions, demonstrations and cultural events.  All times are local to Mexico City (UTC‑6).</p>
-    <h3>16 June 2026 – Opening day</h3>
-    <table class="schedule">
-        <tr><th>Time</th><th>Activity</th><th>Speaker</th></tr>
-        <tr><td>10:00–10:30</td><td>Opening ceremony – Welcome by Nestor Anaya Marín, Mélie Cornet & Eduardo Gómez Ramírez</td><td>Multiple</td></tr>
-        <tr><td>10:30–12:00</td><td>Lecture 1: A comprehensive overview of robotics today</td><td>Dr Ahmed Chemori</td></tr>
-        <tr><td>12:00–12:30</td><td>Coffee break & poster session</td><td></td></tr>
-        <tr><td>12:30–14:00</td><td>Lecture 2: Motion control of underactuated robotic systems</td><td>Dr Ahmed Chemori</td></tr>
-        <tr><td>14:00–16:00</td><td>Lunch</td><td></td></tr>
-        <tr><td>16:00–17:30</td><td>Lecture 3: From theory to real‑world applications – How to deploy and sustain connected complex robots</td><td>Dr Mauricio Corona Chavez</td></tr>
-    </table>
-    <h3>17 June 2026 – Parallel and underwater robotics</h3>
-    <table class="schedule">
-        <tr><th>Time</th><th>Activity</th><th>Speaker</th></tr>
-        <tr><td>10:30–12:00</td><td>Lecture 4: Motion control of parallel kinematic manipulators</td><td>Dr Ahmed Chemori</td></tr>
-        <tr><td>12:00–12:30</td><td>Coffee break & poster session</td><td></td></tr>
-        <tr><td>12:30–14:00</td><td>Lecture 5: Motion control of autonomous underwater vehicles</td><td>Dr Ahmed Chemori</td></tr>
-        <tr><td>14:00–16:00</td><td>Lunch</td><td></td></tr>
-        <tr><td>16:00–17:30</td><td>Demonstrations session: Autonomous systems live demonstrations and technical walkthroughs</td><td>Hipólito Aguilar Sierra</td></tr>
-    </table>
-    <h3>18 June 2026 – Humanoids and exoskeletons</h3>
-    <table class="schedule">
-        <tr><th>Time</th><th>Activity</th><th>Speaker</th></tr>
-        <tr><td>10:30–12:00</td><td>Lecture 7: On walking gait control – From human to humanoid robots</td><td>Dr Ahmed Chemori</td></tr>
-        <tr><td>12:00–12:30</td><td>Coffee break & poster session</td><td></td></tr>
-        <tr><td>12:30–14:00</td><td>Lecture 8: Advanced control of wearable rehabilitation exoskeletons</td><td>Dr Ahmed Chemori</td></tr>
-        <tr><td>14:00–16:00</td><td>Lunch</td><td></td></tr>
-        <tr><td>16:00–17:30</td><td>Cultural event: Friendly robot match</td><td>Hipólito Aguilar Sierra</td></tr>
-    </table>
-    <h3>19 June 2026 – Simulation, technology and closing</h3>
-    <table class="schedule">
-        <tr><th>Time</th><th>Activity</th><th>Speaker</th></tr>
-        <tr><td>10:30–12:00</td><td>Project session: Laboratory course (Simulation with MATLAB/Simulink)</td><td>Dr Ahmed Chemori</td></tr>
-        <tr><td>12:00–12:30</td><td>Coffee break & poster session</td><td></td></tr>
-        <tr><td>12:30–14:00</td><td>Lecture 9: Vision and AI for complex robotics</td><td>Dr Moisés Alencastre Miranda</td></tr>
-        <tr><td>14:00–16:00</td><td>Lunch</td><td></td></tr>
-        <tr><td>16:00–17:30</td><td>Closing ceremony – Certificates, best poster award & closing speech</td><td>Hipolito Aguilar Sierra</td></tr>
-    </table>
-    <div class="abstracts">
-        <h3>Lecture Highlights</h3>
-        <ul>
-            <li><strong>Robotics overview</strong> – surveys industrial, mobile, humanoid, aerial, marine and wearable robotics and illustrates modern applications.</li>
-            <li><strong>Underactuated systems</strong> – studies control of systems with fewer actuators than degrees of freedom, including stabilization and limit cycle generation.</li>
-            <li><strong>Parallel manipulators</strong> – compares serial and parallel robots, presenting adaptive control solutions for high‑speed applications.</li>
-            <li><strong>Autonomous underwater vehicles</strong> – examines nonlinear dynamics and adaptive control strategies for tethered vehicles.</li>
-            <li><strong>Humanoid gait</strong> – introduces human‑data‑based control for dynamic walking using foot and centre‑of‑mass positions.</li>
-            <li><strong>Wearable robotics</strong> – discusses demographic drivers and control solutions for rehabilitation exoskeletons.</li>
-            <li><strong>Laboratory course</strong> – offers hands‑on simulations for various robotic systems using MATLAB/Simulink.</li>
-        </ul>
-    </div>
-</section>
-
-<section id="keynote">
-    <h2>Keynote</h2>
-    <p><strong>Dr Ahmed Chemori</strong> received his M.Sc. and Ph.D. degrees in automatic control from the Polytechnic Institute of Grenoble in 2001 and 2005.  He is a senior researcher at CNRS (LIRMM, University of Montpellier) and an expert in nonlinear control with real‑time applications in parallel robotics, underwater robotics, wearable robotics and underactuated systems.  With more than 190 publications and extensive experience supervising students, he serves as a technical editor for IEEE/ASME Transactions on Mechatronics and contributes to several international technical committees.  Dr Chemori will deliver the majority of lectures during the school.</p>
-</section>
-
-<section id="panel">
-    <h2>Panel & Special Sessions</h2>
-    <div class="panel-list">
-        <ul>
-            <li><strong>From theory to real‑world applications</strong> – Dr Mauricio Corona Chavez will demonstrate how to deploy and sustain connected complex robots in industrial settings.</li>
-            <li><strong>Demonstrations session</strong> – Hipolito Aguilar Sierra will host live demonstrations of autonomous systems and technical walkthroughs.</li>
-            <li><strong>Cultural event: Friendly robot match</strong> – an informal contest where participants interact with robots in a friendly competition.</li>
-        </ul>
-    </div>
-</section>
-
-<section id="poster">
-    <h2>Poster Session</h2>
-    <p>Each day features a coffee break combined with a poster session.  Researchers and students are invited to showcase their work on topics such as motion control, nonlinear control, wearable robotics, underwater robotics, parallel manipulators, human–robot interaction and AI for complex robots.  Guidelines for poster dimensions and submission deadlines will be provided.  The best poster will be recognised during the closing ceremony.</p>
-</section>
-
-<section id="photo">
-    <h2>Photo Gallery</h2>
-    <p>Photos from CCRS 2026 and earlier editions will appear here.  Participants can share their images for inclusion in the gallery.  Below are sample placeholders.</p>
-    <div class="photo-gallery">
-        <img src="hero.png" alt="Robotics conference" />
-        <img src="hero.png" alt="Lecture hall" />
-        <img src="hero.png" alt="Demonstration session" />
-        <img src="hero.png" alt="Cultural event" />
-    </div>
-</section>
-
-<section id="contact">
-    <h2>Venue & Contact</h2>
-    <div class="venue-content">
-        <div class="venue-info">
-            <img src="campus1_lasalle.jpeg" alt="Universidad La Salle" class="venue-building-img">
-            <h3>Universidad La Salle Mexico</h3>
-            <p><strong>Multipurpose Room – CeTIDi</strong></p>
-            <p>Center for Transdisciplinary Research, Development and Innovation</p>
-            <p>Mexico City, Mexico</p>
-            <p style="margin-top: 15px;"><strong>Contact Inquiries:</strong> <br> <a href="mailto:ccrs2026@lasalle.mx">ccrs2026@lasalle.mx</a></p>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="Logo_LaSalle.png" alt="La Salle Logo">
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#speaker">Speaker</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#abstracts">Abstracts</a></li>
+                <li><a href="#organizers">Organizers</a></li>
+                <li><a href="#venue">Venue</a></li>
+            </ul>
         </div>
-        <div class="venue-map">
-            <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2197.252674835256!2d-99.18238237773673!3d19.408748462418032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff000df11e3d%3A0x3e710fb2c4cecec1!2sCentro%20Transdisciplinario%20de%20Investigaci%C3%B3n%20Desarrollo%20e%20innovaci%C3%B3n%20Universidad%20La%20Salle!5e0!3m2!1sen!2smx!4v1773081542431!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </div>
-</section>
+    </nav>
 
-<section id="sponsors">
-    <h2>Event Sponsors & Organizers</h2>
-    <div class="sponsors-grid">
-        <div class="sponsor-item">
-            <img src="Logo_LaSalle.png" alt="Universidad La Salle">
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-logos">
+                <span class="logo-text">La Salle</span>
+                <span class="divider">|</span>
+                <span class="logo-text">CINVESTAV</span>
+                <span class="divider">|</span>
+                <span class="logo-text">CNRS</span>
+                <span class="divider">|</span>
+                <span class="logo-text">LIRMM</span>
+            </div>
+            <h2 class="hero-subtitle">The 3<sup>rd</sup> Summer School on</h2>
+            <h1 class="hero-title">Control of Complex<br>Robotic Systems<br>(CCRS 2026)</h1>
+            <p class="hero-department"><i class="fas fa-university"></i> Universidad La Salle Mexico</p>
+            <p class="hero-location"><i class="fas fa-map-marker-alt"></i> Mexico City, Mexico</p>
+            <p class="hero-dates"><i class="far fa-calendar-alt"></i> June 16 - 19, 2026</p>
+            <div class="hero-cta">
+                <a href="#schedule" class="btn btn-primary">View Schedule</a>
+                <a href="#venue" class="btn btn-secondary">Venue Details</a>
+            </div>
         </div>
-        <div class="sponsor-item">
-            <img src="Logo_CNRS.jpg" alt="CNRS">
-        </div>
-        <div class="sponsor-item">
-            <img src="Logo_LIRMM.jpg" alt="LIRMM">
-        </div>
-        <div class="sponsor-item">
-            <img src="Logo_UniMontpellier.jpg" alt="University of Montpellier">
-        </div>
-        <div class="sponsor-item">
-            <img src="Logo_CINVESTAV.png" alt="CINVESTAV">
-        </div>
-        <div class="sponsor-item">
-            <img src="Logo_DCA.jpg" alt="DCA">
-        </div>
-        <div class="sponsor-item">
-            <img src="Logo_RedLate.png" alt="RedLate">
-        </div>
-    </div>
-</section>
+    </header>
 
-<div class="footer">
-    <p>&copy; 2026 CCRS – Control of Complex Robotic Systems Summer School | Universidad La Salle Mexico • CNRS • University of Montpellier • CINVESTAV</p>
-</div>
+    <section id="about" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>About The Event</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p>The Third Summer School on Control of Complex Robotic Systems (CCRS 2026), is an international academic event for students, researchers, and faculty interested in advanced robotics and motion control. As robotic systems become more complex, their control demands stronger tools to address nonlinear dynamics, actuation constraints, environmental interaction, and real time operation.</p>
+                    <p>CCRS 2026 offers an intensive learning space where participants can engage with current challenges through lectures, simulation, and applied discussions. In 2026, Universidad La Salle Mexico joins this trajectory as the new host institution. The program includes lectures on underactuated robotic systems, parallel manipulators, autonomous underwater vehicles, gait control, wearable rehabilitation exoskeletons, connected robotic systems, and vision and AI for complex robotics.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <i class="fas fa-robot"></i>
+                        <h4>Advanced Robotics</h4>
+                        <p>Underactuated systems, parallel manipulators, and underwater vehicles.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-microchip"></i>
+                        <h4>Motion Control</h4>
+                        <p>Gait control and wearable rehabilitation exoskeletons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="speaker" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Keynote Speaker</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="speaker-profile">
+                <div class="speaker-image-container">
+                    <img src="Foto_AhmedChemori.jpg" alt="Dr. Ahmed Chemori" class="speaker-img">
+                </div>
+                <div class="speaker-info">
+                    <h3>Dr. Ahmed Chemori</h3>
+                    <p class="speaker-title">Senior Researcher, LIRMM, CNRS / University of Montpellier</p>
+                    <p class="speaker-bio">
+                        Ahmed CHEMORI received the M.Sc. and Ph.D. degrees in automatic control from the Polytechnic Institute of Grenoble, France. He is currently a Senior Researcher at the CNRS in automatic control and robotics, affiliated with LIRMM laboratory. His research interests include nonlinear control (robust, adaptive, and predictive approaches) and their real-time applications in various areas of robotics, including parallel robotics, underwater robotics, wearable robotics, and underactuated systems. He has co-supervised 26 Ph.D. theses and more than 40 M.Sc. theses, and is the author of over 190 scientific publications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Program Schedule</h2>
+                <p class="timezone-note">All times are local to Mexico City (UTC-6).</p>
+                <div class="underline"></div>
+            </div>
+
+            <div class="schedule-tabs">
+                <button class="tab-btn active" data-day="day1">Tue 16/06</button>
+                <button class="tab-btn" data-day="day2">Wed 17/06</button>
+                <button class="tab-btn" data-day="day3">Thu 18/06</button>
+                <button class="tab-btn" data-day="day4">Fri 19/06</button>
+            </div>
+
+            <div class="schedule-content">
+                <div class="day-schedule active" id="day1">
+                    <div class="timeline-item">
+                        <div class="time">10:00 - 10:30</div>
+                        <div class="content"><h4>Opening Ceremony</h4><p>Eduardo Gómez Ramírez, Sabine Mondié Cuzange, Mélie Cornet</p></div>
+                    </div>
+                    <div class="timeline-item lecture">
+                        <div class="time">10:30 - 12:00</div>
+                        <div class="content"><span class="tag">Lecture 1</span><h4>A comprehensive overview of Robotics Today</h4><p>Speaker: Ahmed Chemori</p></div>
+                    </div>
+                    <div class="timeline-item lecture">
+                        <div class="time">12:30 - 14:00</div>
+                        <div class="content"><span class="tag">Lecture 2</span><h4>Motion control of underactuated robotic systems</h4><p>Speaker: Ahmed Chemori</p></div>
+                    </div>
+                    <div class="timeline-item event">
+                        <div class="time">16:00 - 17:30</div>
+                        <div class="content"><span class="tag event-tag">Lecture</span><h4>How to Deploy and Sustain Connected Complex Robots</h4></div>
+                    </div>
+                </div>
+                <div class="day-schedule" id="day2">
+                    <div class="timeline-item lecture">
+                        <div class="time">10:30 - 12:00</div>
+                        <div class="content"><span class="tag">Lecture 3</span><h4>Motion control of parallel kinematic manipulators</h4><p>Speaker: Ahmed Chemori</p></div>
+                    </div>
+                    <div class="timeline-item lecture">
+                        <div class="time">12:30 - 14:00</div>
+                        <div class="content"><span class="tag">Lecture 4</span><h4>Motion control of autonomous underwater vehicles</h4><p>Speaker: Ahmed Chemori</p></div>
+                    </div>
+                    <div class="timeline-item event">
+                        <div class="time">16:00 - 17:30</div>
+                        <div class="content"><span class="tag event-tag">Visit</span><h4>Guided Visit to the Innovation iLabs at CeTIDi</h4></div>
+                    </div>
+                </div>
+                <div class="day-schedule" id="day3">
+                    <div class="timeline-item lecture">
+                        <div class="time">10:30 - 12:00</div>
+                        <div class="content"><span class="tag">Lecture 5</span><h4>On walking gait control: From human to humanoid robots</h4><p>Speaker: Ahmed Chemori</p></div>
+                    </div>
+                    <div class="timeline-item lecture">
+                        <div class="time">12:30 - 14:00</div>
+                        <div class="content"><span class="tag">Lecture 6</span><h4>Advanced control of wearable rehabilitation exoskeletons</h4><p>Speaker: Ahmed Chemori</p></div>
+                    </div>
+                    <div class="timeline-item event">
+                        <div class="time">16:00 - 17:30</div>
+                        <div class="content"><span class="tag event-tag">Demonstration</span><h4>Autonomous Systems Live Demonstrations</h4></div>
+                    </div>
+                </div>
+                <div class="day-schedule" id="day4">
+                    <div class="timeline-item lecture">
+                        <div class="time">10:30 - 12:00</div>
+                        <div class="content"><span class="tag">Lecture 7</span><h4>Laboratory Course (Simulation with MATLAB/Simulink)</h4><p>Speaker: Ahmed Chemori</p></div>
+                    </div>
+                    <div class="timeline-item event">
+                        <div class="time">12:30 - 14:00</div>
+                        <div class="content"><span class="tag event-tag">Lecture</span><h4>Vision and AI for Complex Robotics</h4></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">16:00 - 17:30</div>
+                        <div class="content"><h4>Closing Ceremony</h4><p>Speaker: Hipolito Aguilar Sierra</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="abstracts" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lecture Abstracts</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="abstracts-list">
+                <details class="abstract-item">
+                    <summary>
+                        <span class="lecture-id">Lecture 1</span>
+                        <span class="lecture-title">A comprehensive overview of Robotics Today</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <div class="abstract-content">
+                        <p>Robotics is an interdisciplinary branch of engineering that includes mechanical engineering, electrical engineering, computer engineering, control engineering and others. It deals with design, construction and use of robots, as well as computer systems for their control, sensory feedback, and information processing...</p>
+                    </div>
+                </details>
+                <details class="abstract-item">
+                    <summary>
+                        <span class="lecture-id">Competition</span>
+                        <span class="lecture-title">3 Minutes Thesis</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <div class="abstract-content">
+                        <p>The 3 Minute Thesis session is a short academic presentation activity for doctoral students within the Summer School. Its purpose is to help PhD candidates present the core of their research in a clear, engaging, and accessible way within only three minutes.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="organizers" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Local Organizing Committee</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="organizers-grid">
+                
+                <div class="organizer-card">
+                    <div class="organizer-img-container">
+                        <img src="foto_drHipolito.png" alt="Dr. Hipólito Aguilar Sierra" class="organizer-img">
+                    </div>
+                    <div class="organizer-info">
+                        <h3>Dr. Hipólito Aguilar Sierra</h3>
+                        <p class="organizer-title">Head of Engineering Department</p>
+                        <p class="organizer-email"><a href="mailto:hipolito.aguilar@lasalle.mx">hipolito.aguilar@lasalle.mx</a></p>
+                    </div>
+                </div>
+
+                <div class="organizer-card">
+                    <div class="organizer-img-container">
+                        <img src="Foto_Victoria.jpeg" alt="Mtra. Victoria Contreras García" class="organizer-img">
+                    </div>
+                    <div class="organizer-info">
+                        <h3>Mtra. Victoria Contreras García</h3>
+                        <p class="organizer-title">Innovation and Technology Transfer</p>
+                        <p class="organizer-email"><a href="mailto:victoria.contreras@lasalle.mx">victoria.contreras@lasalle.mx</a></p>
+                    </div>
+                </div>
+
+                <div class="organizer-card">
+                    <div class="organizer-img-container">
+                        <img src="foto_generica.jpg" alt="Angel Istvan Vela Marquez" class="organizer-img">
+                    </div>
+                    <div class="organizer-info">
+                        <h3>Angel Istvan Vela Marquez</h3>
+                        <p class="organizer-title">Webmaster / Volunteer</p>
+                        <p class="organizer-email"><a href="mailto:angel.vela@lasallistas.org.mx">angel.vela@lasallistas.org.mx</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="venue" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Venue & Contact</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="venue-content">
+                <div class="venue-info">
+                    <img src="campus1_lasalle.jpeg" alt="Universidad La Salle" class="venue-building-img">
+                    <h3>Universidad La Salle Mexico</h3>
+                    <p class="venue-detail"><i class="fas fa-building"></i> Center for Transdisciplinary Research, Development and Innovation (CeTIDI)</p>
+                    <p class="venue-detail"><i class="fas fa-map-marker-alt"></i> Mexico City, Mexico</p>
+                    <p class="venue-note" style="margin-top: 20px;"><i class="fas fa-envelope"></i> Contact: <a href="mailto:hipolito.aguilar@lasalle.mx">hipolito.aguilar@lasalle.mx</a></p>
+                </div>
+                <div class="venue-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.6617061730595!2d-99.18465928509355!3d19.4054451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff5c13887955%3A0xb31fc805c6d59b21!2sUniversidad%20La%20Salle%20M%C3%A9xico!5e0!3m2!1sen!2smx!4v1700000000000!5m2!1sen!2smx" width="100%" height="100%" style="border:0; min-height: 400px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsors" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Event Sponsors & Organizers</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="sponsors-grid">
+                <div class="sponsor-item"><img src="Logo_LaSalle.png" alt="Universidad La Salle"></div>
+                <div class="sponsor-item"><img src="Logo_CNRS.jpg" alt="CNRS"></div>
+                <div class="sponsor-item"><img src="Logo_LIRMM.jpg" alt="LIRMM"></div>
+                <div class="sponsor-item"><img src="Logo_UniMontpellier.jpg" alt="University of Montpellier"></div>
+                <div class="sponsor-item"><img src="Logo_CINVESTAV.png" alt="CINVESTAV"></div>
+                <div class="sponsor-item"><img src="Logo_DCA.jpg" alt="DCA"></div>
+                <div class="sponsor-item"><img src="Logo_RedLate.png" alt="RedLate"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h3>CCRS 2026</h3>
+            </div>
+            <p>© 2026 Summer School on Control of Complex Robotic Systems. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
