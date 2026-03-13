@@ -515,6 +515,45 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Funcionalidad de las Pestañas (Tabs)
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const daySchedules = document.querySelectorAll('.day-schedule');
+
+            if (tabBtns.length > 0 && daySchedules.length > 0) {
+                tabBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        // Quitamos 'active' de todos
+                        tabBtns.forEach(b => b.classList.remove('active'));
+                        daySchedules.forEach(s => s.classList.remove('active'));
+
+                        // Agregamos 'active' al presionado
+                        this.classList.add('active');
+
+                        // Mostramos el horario correspondiente
+                        const targetId = this.getAttribute('data-day');
+                        const targetSchedule = document.getElementById(targetId);
+                        
+                        if (targetSchedule) {
+                            targetSchedule.classList.add('active');
+                        }
+                    });
+                });
+            }
+
+            // 2. Funcionalidad del Menú Móvil
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
