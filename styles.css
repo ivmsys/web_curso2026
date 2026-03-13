@@ -151,3 +151,5 @@ ul { list-style: none; }
     .abstract-image { flex: none; max-width: 100px; }
     .organizers-grid { grid-template-columns: 1fr; }
 }
+.hero-important-dates { margin: 25px 0; font-size: 1.1rem; line-height: 1.4; }
+.hero-limit-note { margin-top: 15px; font-size: 0.9rem; opacity: 0.8; font-style: italic; }
