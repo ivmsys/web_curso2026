@@ -59,10 +59,10 @@
 
             <div class="hero-cta">
                 <a href="#schedule" class="btn btn-primary">View Schedule</a>
-                <a href="https://forms.gle/mRayHSLircz5f7ms8" target="_blank" class="btn btn-secondary">Register Now</a>
+                <a href="AQUI_TU_LINK" target="_blank" class="btn btn-secondary">Register Now</a>
             </div>
 
-            <p class="hero-limit-note">*Registration is limited.</p>
+            <p class="hero-limit-note">*Registration is limited to 50 participants.</p>
         </div>
     </header>
 
@@ -89,31 +89,16 @@
                     and connect with an international robotics community.</p>
                 </div>
                 <div class="about-highlights">
-                    
-                    <div style="text-align: center; padding: 15px; background: rgba(0, 47, 95, 0.05); border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                        <p style="font-weight: 600; color: var(--primary-color); margin: 0; font-size: 1.05rem;">
-                            Participation in the CCRS 2026 summer school is completely FREE of charge.
-                        </p>
-                    </div>
-
                     <div class="highlight-card">
                         <i class="fas fa-robot"></i>
                         <h4>Advanced Robotics</h4>
                         <p>Underactuated systems, parallel manipulators, and underwater vehicles.</p>
                     </div>
-                    
                     <div class="highlight-card">
                         <i class="fas fa-microchip"></i>
                         <h4>Motion Control</h4>
                         <p>Gait control and wearable rehabilitation exoskeletons.</p>
                     </div>
-
-                    <div style="text-align: center; padding: 15px; background: rgba(224, 0, 52, 0.05); border-radius: 8px; border-left: 4px solid var(--accent-color);">
-                        <p style="font-weight: 600; color: var(--accent-color); margin: 0; font-size: 1.05rem;">
-                            Registration is subject to Limited availability.
-                        </p>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -521,27 +506,20 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 1. Funcionalidad de las Pestañas (Tabs)
+            // 1. Funcionalidad de las Pestañas (Tabs de Horarios)
             const tabBtns = document.querySelectorAll('.tab-btn');
             const daySchedules = document.querySelectorAll('.day-schedule');
 
             if (tabBtns.length > 0 && daySchedules.length > 0) {
                 tabBtns.forEach(btn => {
                     btn.addEventListener('click', function() {
-                        // Quitamos 'active' de todos
                         tabBtns.forEach(b => b.classList.remove('active'));
                         daySchedules.forEach(s => s.classList.remove('active'));
-
-                        // Agregamos 'active' al presionado
                         this.classList.add('active');
-
-                        // Mostramos el horario correspondiente
+                        
                         const targetId = this.getAttribute('data-day');
                         const targetSchedule = document.getElementById(targetId);
-                        
-                        if (targetSchedule) {
-                            targetSchedule.classList.add('active');
-                        }
+                        if (targetSchedule) targetSchedule.classList.add('active');
                     });
                 });
             }
@@ -554,10 +532,42 @@
                 menuToggle.addEventListener('click', function() {
                     navLinks.classList.toggle('active');
                 });
+                
+                // Cerrar menú al hacer clic en un enlace (móvil)
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                    });
+                });
             }
+
+            // 3. NUEVO: Resaltar botón del menú activo (Azul a Rojo)
+            const navItems = document.querySelectorAll('.nav-links li a');
+            const sections = document.querySelectorAll('section, header');
+
+            function updateActiveMenu() {
+                let current = '';
+                // Detecta qué sección está en la pantalla actual
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.scrollY >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                // Cambia el color del botón correspondiente
+                navItems.forEach(a => {
+                    a.classList.remove('active');
+                    if (a.getAttribute('href') === `#${current}`) {
+                        a.classList.add('active');
+                    }
+                });
+            }
+
+            // Ejecutar al hacer scroll y una vez al cargar la página
+            window.addEventListener('scroll', updateActiveMenu);
+            updateActiveMenu(); 
         });
     </script>
-</body>
-</html>
 </body>
 </html>
