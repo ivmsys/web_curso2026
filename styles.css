@@ -19,8 +19,7 @@ body {
     line-height: 1.6; 
     color: var(--text-dark); 
     background-color: var(--white);
-    padding-top: 0; /* Liberamos el top */
-    padding-bottom: 90px; /* Dejamos un colchón para la barra inferior */
+    padding: 0; /* Limpiamos los márgenes */
 }
 h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; color: var(--primary-color); font-weight: 700; }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
@@ -32,15 +31,14 @@ ul { list-style: none; }
 .btn-secondary { background-color: transparent; color: var(--white); border: 2px solid var(--white); margin-left: 10px; }
 .btn-secondary:hover { background-color: var(--white); color: var(--primary-color); }
 
-/* Navbar (Fija en la parte inferior) */
+
 .navbar { 
     background-color: rgba(255, 255, 255, 0.98); 
-    position: fixed; 
-    bottom: 0; /* Magia: La ancla a la parte de ABAJO de la pantalla */
-    top: auto; /* Nos aseguramos de liberar el header */
+    position: sticky; /* MAGIA: Se queda pegada al tocar el tope de la pantalla */
+    top: 0; 
     width: 100%; 
     z-index: 1000; 
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Sombra invertida (hacia arriba) */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); /* Sombra normal hacia abajo */
     padding: 15px 0; 
 }
 
@@ -196,15 +194,14 @@ ul { list-style: none; }
     .nav-links { 
         display: none; 
         position: absolute; 
-        bottom: 100%; /* Hace que el menú de celular suba en lugar de bajar */
-        top: auto;
+        top: 100%; /* El menú vuelve a abrir hacia abajo */
         left: 0; 
         width: 100%; 
         background: var(--white); 
         flex-direction: column; 
         padding: 20px; 
         text-align: center; 
-        box-shadow: 0 -4px 6px -1px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         z-index: 100; 
     }
     .nav-links.active { display: flex; }

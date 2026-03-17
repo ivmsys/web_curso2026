@@ -13,25 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#home" class="logo">
-                <img src="Logo_LaSalle.png" alt="La Salle Logo">
-            </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#speaker">Speaker</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#abstracts">Abstracts</a></li>
-                <li><a href="#organizers">Organizers</a></li>
-                <li><a href="#venue">Venue</a></li>
-            </ul>
-        </div>
-    </nav>
+    
 
     <header id="home" class="hero">
         <div class="hero-overlay"></div>
@@ -65,6 +47,25 @@
             <p class="hero-limit-note">*Registration is limited.</p>
         </div>
     </header>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="Logo_LaSalle.png" alt="La Salle Logo">
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#speaker">Speaker</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#abstracts">Abstracts</a></li>
+                <li><a href="#organizers">Organizers</a></li>
+                <li><a href="#venue">Venue</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <section id="about" class="section section-light">
         <div class="container">
@@ -520,53 +521,58 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // 1. LÓGICA DE NAVEGACIÓN (Ocultar y Mostrar)
-            const allSections = document.querySelectorAll('header.hero, section.section');
-            const navLinks = document.querySelectorAll('.nav-links li a');
+        const allSections = document.querySelectorAll('section.section'); // Ya NO incluimos el header
+        const navLinks = document.querySelectorAll('.nav-links li a');
+        const navbar = document.querySelector('.navbar');
 
-            function showSection(targetId) {
-                // A. Ocultar absolutamente todas las secciones
-                allSections.forEach(sec => {
-                    sec.classList.add('spa-hidden');
-                });
+        function showSection(targetId) {
+            if (targetId === 'home') {
+                // Si tocan Home, ocultamos todo el contenido y subimos a la portada
+                allSections.forEach(sec => sec.classList.add('spa-hidden'));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                // Ocultamos todas las secciones de contenido
+                allSections.forEach(sec => sec.classList.add('spa-hidden'));
                 
-                // B. Mostrar solo la sección a la que se le dio clic
+                // Mostramos SOLO a la que le dieron clic
                 const targetElement = document.getElementById(targetId);
                 if (targetElement) {
                     targetElement.classList.remove('spa-hidden');
                 }
-
-                // C. Actualizar los colores de los botones (Rojo activo, Azul inactivo)
-                navLinks.forEach(a => {
-                    a.classList.remove('active');
-                    if (a.getAttribute('href') === '#' + targetId) {
-                        a.classList.add('active');
-                    }
-                });
-
-                // D. Subir la pantalla hasta arriba para ver la sección desde el inicio
-                window.scrollTo(0, 0);
+                
+                // Hacemos scroll suave para que la barra quede arriba y puedan leer el contenido
+                window.scrollTo({ top: navbar.offsetTop, behavior: 'smooth' });
             }
 
-            // Escuchar clics en los botones del menú superior
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault(); // Detiene el scroll normal
-                    const targetId = this.getAttribute('href').substring(1);
-                    showSection(targetId);
-                });
+            // Cambiamos el color al botón activo
+            navLinks.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + targetId) {
+                    a.classList.add('active');
+                }
             });
+        }
 
-            // Hacer que el botón de "View Schedule" en el Inicio también cambie la pantalla
-            const viewScheduleBtn = document.querySelector('a[href="#schedule"].btn-primary');
-            if(viewScheduleBtn) {
-                viewScheduleBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    showSection('schedule');
-                });
-            }
+        // Escuchar clics en el menú
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                showSection(targetId);
+            });
+        });
 
-            // Iniciar la página mostrando ÚNICAMENTE el inicio (Home/Hero)
-            showSection('home');
+        // Hacer que el botón de "View Schedule" en la portada también funcione
+        const viewScheduleBtn = document.querySelector('a[href="#schedule"].btn-primary');
+        if(viewScheduleBtn) {
+            viewScheduleBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                showSection('schedule');
+            });
+        }
+
+        // Iniciar página mostrando solo la portada
+        showSection('home');
 
             // 2. FUNCIONALIDAD DE LAS PESTAÑAS (Tabs de Horarios - Se mantiene igual)
             const tabBtns = document.querySelectorAll('.tab-btn');
