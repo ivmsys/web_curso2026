@@ -14,7 +14,14 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-dark); background-color: var(--white); }
+body { 
+    font-family: 'Inter', sans-serif; 
+    line-height: 1.6; 
+    color: var(--text-dark); 
+    background-color: var(--white);
+    padding-top: 0; /* Liberamos el top */
+    padding-bottom: 90px; /* Dejamos un colchón para la barra inferior */
+}
 h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; color: var(--primary-color); font-weight: 700; }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 ul { list-style: none; }
@@ -25,41 +32,37 @@ ul { list-style: none; }
 .btn-secondary { background-color: transparent; color: var(--white); border: 2px solid var(--white); margin-left: 10px; }
 .btn-secondary:hover { background-color: var(--white); color: var(--primary-color); }
 
-/* Navbar */
+/* Navbar (Fija en la parte inferior) */
 .navbar { 
-    background-color: rgba(255, 255, 255, 0.98); /* Fondo blanco para que los botones destaquen */
+    background-color: rgba(255, 255, 255, 0.98); 
     position: fixed; 
-    top: 0; 
+    bottom: 0; /* Magia: La ancla a la parte de ABAJO de la pantalla */
+    top: auto; /* Nos aseguramos de liberar el header */
     width: 100%; 
     z-index: 1000; 
-    box-shadow: var(--shadow-md); 
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Sombra invertida (hacia arriba) */
     padding: 15px 0; 
 }
+
 .nav-container { 
     display: flex; 
-    flex-direction: column; /* Apila el logo arriba y los botones abajo */
-    align-items: center;    /* Centra todo horizontalmente */
-    gap: 15px; 
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; 
     position: relative;
 }
-.menu-toggle { 
-    display: none; 
-    background: none; 
-    border: none; 
-    font-size: 1.5rem; 
-    cursor: pointer; 
-    color: var(--primary-color); 
-    position: absolute; /* Mantiene el botón de menú móvil a la derecha */
-    right: 20px;
-    top: 15px;
+
+/* Ocultamos el logo de la barra inferior para que sea un menú limpio */
+.navbar .logo {
+    display: none;
 }
+
 .nav-links { 
     display: flex; 
     justify-content: center; 
     flex-wrap: wrap; 
     gap: 12px; 
 }
-/* Estilo de botones: Azul por defecto, Rojo al seleccionar */
+
 .nav-links li a { 
     font-weight: 600; 
     font-size: 0.95rem; 
@@ -70,10 +73,23 @@ ul { list-style: none; }
     transition: var(--transition);
     display: inline-block;
 }
+
 .nav-links li a:hover,
 .nav-links li a.active { 
     background-color: var(--accent-color); 
     color: var(--white) !important;
+}
+
+.menu-toggle { 
+    display: none; 
+    background: none; 
+    border: none; 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+    color: var(--primary-color); 
+    position: absolute;
+    right: 20px;
+    top: -2px;
 }
 
 /* Hero */
@@ -177,7 +193,20 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
-    .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--white); flex-direction: column; padding: 20px; text-align: center; box-shadow: var(--shadow-md); z-index: 100; }
+    .nav-links { 
+        display: none; 
+        position: absolute; 
+        bottom: 100%; /* Hace que el menú de celular suba en lugar de bajar */
+        top: auto;
+        left: 0; 
+        width: 100%; 
+        background: var(--white); 
+        flex-direction: column; 
+        padding: 20px; 
+        text-align: center; 
+        box-shadow: 0 -4px 6px -1px rgba(0,0,0,0.1);
+        z-index: 100; 
+    }
     .nav-links.active { display: flex; }
     .nav-links li { margin: 10px 0; }
     .menu-toggle { display: block; }
