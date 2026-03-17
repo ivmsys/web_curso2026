@@ -26,30 +26,55 @@ ul { list-style: none; }
 .btn-secondary:hover { background-color: var(--white); color: var(--primary-color); }
 
 /* Navbar */
-.navbar { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: var(--shadow-md); padding: 15px 0; transition: var(--transition); }
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo img { height: 50px; width: auto; }
+.navbar { 
+    background-color: rgba(255, 255, 255, 0.98); /* Fondo blanco para que los botones destaquen */
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: var(--shadow-md); 
+    padding: 15px 0; 
+}
+.nav-container { 
+    display: flex; 
+    flex-direction: column; /* Apila el logo arriba y los botones abajo */
+    align-items: center;    /* Centra todo horizontalmente */
+    gap: 15px; 
+    position: relative;
+}
+.menu-toggle { 
+    display: none; 
+    background: none; 
+    border: none; 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+    color: var(--primary-color); 
+    position: absolute; /* Mantiene el botón de menú móvil a la derecha */
+    right: 20px;
+    top: 15px;
+}
 .nav-links { 
     display: flex; 
-    gap: 12px; /* Reduje un poco el espacio para que quepan bien los botones */
-    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 12px; 
 }
+/* Estilo de botones: Azul por defecto, Rojo al seleccionar */
 .nav-links li a { 
     font-weight: 600; 
     font-size: 0.95rem; 
-    background-color: var(--primary-color); /* Fondo Azul por defecto */
+    background-color: var(--primary-color); 
     color: var(--white) !important; 
-    padding: 8px 18px; /* Crea la forma del rectángulo */
-    border-radius: 4px; /* Bordes ligeramente redondeados */
+    padding: 8px 18px; 
+    border-radius: 4px; 
     transition: var(--transition);
     display: inline-block;
 }
 .nav-links li a:hover,
 .nav-links li a.active { 
-    background-color: var(--accent-color); /* Cambia a Rojo al pasar el mouse o al estar activo */
+    background-color: var(--accent-color); 
     color: var(--white) !important;
 }
-.menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
 
 /* Hero */
 .hero { height: 100vh; min-height: 600px; background: linear-gradient(135deg, var(--primary-color) 0%, #001833 100%); position: relative; display: flex; align-items: center; color: var(--white); text-align: center; }
@@ -170,3 +195,9 @@ ul { list-style: none; }
 }
 .hero-important-dates { margin: 25px 0; font-size: 1.1rem; line-height: 1.4; }
 .hero-limit-note { margin-top: 15px; font-size: 0.9rem; opacity: 0.8; font-style: italic; }
+body {
+    padding-top: 140px; /* Evita que la nueva barra alta tape el contenido */
+}
+.spa-hidden {
+    display: none !important; /* Oculta por completo las secciones no activas */
+}

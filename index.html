@@ -506,7 +506,56 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 1. Funcionalidad de las Pestañas (Tabs de Horarios)
+            // 1. LÓGICA DE NAVEGACIÓN (Ocultar y Mostrar)
+            const allSections = document.querySelectorAll('header.hero, section.section');
+            const navLinks = document.querySelectorAll('.nav-links li a');
+
+            function showSection(targetId) {
+                // A. Ocultar absolutamente todas las secciones
+                allSections.forEach(sec => {
+                    sec.classList.add('spa-hidden');
+                });
+                
+                // B. Mostrar solo la sección a la que se le dio clic
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.classList.remove('spa-hidden');
+                }
+
+                // C. Actualizar los colores de los botones (Rojo activo, Azul inactivo)
+                navLinks.forEach(a => {
+                    a.classList.remove('active');
+                    if (a.getAttribute('href') === '#' + targetId) {
+                        a.classList.add('active');
+                    }
+                });
+
+                // D. Subir la pantalla hasta arriba para ver la sección desde el inicio
+                window.scrollTo(0, 0);
+            }
+
+            // Escuchar clics en los botones del menú superior
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Detiene el scroll normal
+                    const targetId = this.getAttribute('href').substring(1);
+                    showSection(targetId);
+                });
+            });
+
+            // Hacer que el botón de "View Schedule" en el Inicio también cambie la pantalla
+            const viewScheduleBtn = document.querySelector('a[href="#schedule"].btn-primary');
+            if(viewScheduleBtn) {
+                viewScheduleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showSection('schedule');
+                });
+            }
+
+            // Iniciar la página mostrando ÚNICAMENTE el inicio (Home/Hero)
+            showSection('home');
+
+            // 2. FUNCIONALIDAD DE LAS PESTAÑAS (Tabs de Horarios - Se mantiene igual)
             const tabBtns = document.querySelectorAll('.tab-btn');
             const daySchedules = document.querySelectorAll('.day-schedule');
 
@@ -524,49 +573,22 @@
                 });
             }
 
-            // 2. Funcionalidad del Menú Móvil
+            // 3. MENÚ MÓVIL
             const menuToggle = document.querySelector('.menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
+            const navContainerLinks = document.querySelector('.nav-links');
             
-            if (menuToggle && navLinks) {
+            if (menuToggle && navContainerLinks) {
                 menuToggle.addEventListener('click', function() {
-                    navLinks.classList.toggle('active');
+                    navContainerLinks.classList.toggle('active');
                 });
                 
-                // Cerrar menú al hacer clic en un enlace (móvil)
-                navLinks.querySelectorAll('a').forEach(link => {
+                // Cerrar el menú móvil al presionar una opción
+                navLinks.forEach(link => {
                     link.addEventListener('click', () => {
-                        navLinks.classList.remove('active');
+                        navContainerLinks.classList.remove('active');
                     });
                 });
             }
-
-            // 3. NUEVO: Resaltar botón del menú activo (Azul a Rojo)
-            const navItems = document.querySelectorAll('.nav-links li a');
-            const sections = document.querySelectorAll('section, header');
-
-            function updateActiveMenu() {
-                let current = '';
-                // Detecta qué sección está en la pantalla actual
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (window.scrollY >= (sectionTop - 150)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                // Cambia el color del botón correspondiente
-                navItems.forEach(a => {
-                    a.classList.remove('active');
-                    if (a.getAttribute('href') === `#${current}`) {
-                        a.classList.add('active');
-                    }
-                });
-            }
-
-            // Ejecutar al hacer scroll y una vez al cargar la página
-            window.addEventListener('scroll', updateActiveMenu);
-            updateActiveMenu(); 
         });
     </script>
 </body>
