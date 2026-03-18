@@ -222,7 +222,7 @@ ul { list-style: none; }
 .hero-important-dates { margin: 25px 0; font-size: 1.1rem; line-height: 1.4; }
 .hero-limit-note { margin-top: 15px; font-size: 0.9rem; opacity: 0.8; font-style: italic; }
 body {
-    padding-top: 140px; /* Evita que la nueva barra alta tape el contenido */
+    padding-top: 0px
 }
 .spa-hidden {
     display: none !important; /* Oculta por completo las secciones no activas */
