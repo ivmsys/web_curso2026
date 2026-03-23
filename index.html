@@ -1,614 +1,1518 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCRS 2026 - Control of Complex Robotic Systems</title>
-    <meta name="description" content="The Third Summer School on Control of Complex Robotic Systems (CCRS 2026) at Universidad La Salle Mexico.">
-    
+    <meta name="description"
+        content="The Third Summer School on Control of Complex Robotic Systems (CCRS 2026) at Universidad La Salle Mexico.">
+
+    <link rel='stylesheet' id='embedpress-plyr-css-css'
+        href='https://investigacion.lasalle.mx/wp-content/plugins/embedpress/assets/css/plyr.css?ver=1759501790'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='embedpress-carousel-vendor-css-css'
+        href='https://investigacion.lasalle.mx/wp-content/plugins/embedpress/assets/css/carousel.min.css?ver=1759501790'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='embedpress-glider-css-css'
+        href='https://investigacion.lasalle.mx/wp-content/plugins/embedpress/assets/css/glider.min.css?ver=1759501790'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='embedpress-css-css'
+        href='https://investigacion.lasalle.mx/wp-content/plugins/embedpress/assets/css/embedpress.css?ver=1759501790'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='embedpress-blocks-style-css'
+        href='https://investigacion.lasalle.mx/wp-content/plugins/embedpress/assets/css/blocks.build.css?ver=1759501790'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css'
+        href='https://investigacion.lasalle.mx/wp-includes/css/dist/block-library/style.min.css?ver=6.8.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='composer-fonts-css'
+        href='https://investigacion.lasalle.mx/wp-content/themes/composer/_css/pix-icons.css?ver=3.5.4' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='bootstrap-css'
+        href='https://investigacion.lasalle.mx/wp-content/themes/composer/_css/bootstrap.min.css?ver=3.1.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='composer-stylesheet-css'
+        href='https://investigacion.lasalle.mx/wp-content/themes/composer/_css/main.css?ver=3.5.4' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='composer-plugins-stylesheet-css'
+        href='https://investigacion.lasalle.mx/wp-content/themes/composer/_css/plugins.css?ver=3.5.4' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='composer-custom-css-css'
+        href='https://investigacion.lasalle.mx/wp-content/uploads/composer-child-theme/custom.css?ver=1774285414'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='child-theme-style-css'
+        href='https://investigacion.lasalle.mx/wp-content/themes/composer-child/child-theme-style.css?ver=1.0'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='composer-animate-stylesheet-css'
+        href='https://investigacion.lasalle.mx/wp-content/themes/composer/_css/animate.min.css?ver=3.5.4'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='bbpress-css'
+        href='https://investigacion.lasalle.mx/wp-content/themes/composer/_css/bbpress.css?ver=1.0' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='composer-responsive-stylesheet-css'
+        href='https://investigacion.lasalle.mx/wp-content/themes/composer/_css/responsive.css?ver=3.5.4' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='evcal_cal_default-css'
+        href='//investigacion.lasalle.mx/wp-content/plugins/eventON/assets/css/eventon_styles.css?ver=4.6.4'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='evo_font_icons-css'
+        href='//investigacion.lasalle.mx/wp-content/plugins/eventON/assets/fonts/all.css?ver=4.6.4' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='eventon_dynamic_styles-css'
+        href='//investigacion.lasalle.mx/wp-content/plugins/eventON/assets/css/eventon_dynamic_styles.css?ver=4.6.4'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css'
+        href='https://investigacion.lasalle.mx/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.9.0'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='addtoany-css'
+        href='https://investigacion.lasalle.mx/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='bsf-Defaults-css'
+        href='https://investigacion.lasalle.mx/wp-content/uploads/smile_fonts/Defaults/Defaults.css?ver=3.19.11'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'
+        href='https://investigacion.lasalle.mx/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.5.22'
+        type='text/css' media='all' />
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    
 
-    <header id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-logos">
-                <span class="logo-text">La Salle</span>
-                <span class="divider">|</span>
-                <span class="logo-text">CINVESTAV</span>
-                <span class="divider">|</span>
-                <span class="logo-text">CNRS</span>
-                <span class="divider">|</span>
-                <span class="logo-text">LIRMM</span>
-            </div>
-            <h2 class="hero-subtitle">The 3<sup>rd</sup> Summer School on</h2>
-            <h1 class="hero-title">Control of Complex<br>Robotic Systems<br>(CCRS 2026)</h1>
-            <p class="hero-department"><i class="fas fa-university"></i> Universidad La Salle Mexico</p>
-            <p class="hero-location"><i class="fas fa-map-marker-alt"></i> Mexico City, Mexico</p>
-            <p class="hero-dates"><i class="far fa-calendar-alt"></i> June 16 - 19, 2026</p>
-            
-            <div class="hero-important-dates">
-                <p><strong>Important Dates:</strong></p>
-                <p>Registration Open: May 15, 2026</p>
-                <p>Deadline: June 1, 2026</p>
-            </div>
-
-            <div class="hero-cta">
-                <a href="#schedule" class="btn btn-primary">View Schedule</a>
-                <a href="https://forms.gle/mRayHSLircz5f7ms8" target="_blank" class="btn btn-secondary">Register Now</a>
-            </div>
-
-            <p class="hero-limit-note">*Registration is limited.</p>
-        </div>
-    </header>
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#home" class="logo">
-                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_LaSalle.png" alt="La Salle Logo">
-            </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#speaker">Speaker</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#abstracts">Abstracts</a></li>
-                <li><a href="#organizers">Organizers</a></li>
-                <li><a href="#venue">Venue</a></li>
+<body
+    class="wp-singular page-template-default page wp-theme-composer composer-boxed composer-top-header-enabled composer-header-dark full-header wpb-js-composer right-mobile-menu js-comp-ver-6.9.0 vc_responsive">
+    <div class="mobile-menu-nav  menu-light ">
+        <div class="mobile-menu-inner">
+            <ul id="menu-main" class="menu clearfix">
+                <li id="menu-item-41"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/comunidad/" data-scroll="true"
+                        class="external">Comunidad</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-5314"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5314 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/personal_de_investigacion/" data-scroll="true"
+                        class="external">Personal de investigación</a><span class="pix-dropdown-arrow"></span>
+                    <ul class="sub-menu">
+                        <li id="menu-item-4551"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4551"><a
+                                href="https://investigacion.lasalle.mx/personal_de_investigacion/#famadyc"
+                                data-scroll="true">Arquitectura, Diseño y Comunicación</a><span
+                                class="pix-dropdown-arrow"></span></li>
+                        <li id="menu-item-4552"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4552"><a
+                                href="https://investigacion.lasalle.mx/personal_de_investigacion/#ciencias_quimicas"
+                                data-scroll="true">Ciencias Químicas</a><span class="pix-dropdown-arrow"></span></li>
+                        <li id="menu-item-4553"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4553"><a
+                                href="https://investigacion.lasalle.mx/personal_de_investigacion/#derecho"
+                                data-scroll="true">Derecho</a><span class="pix-dropdown-arrow"></span></li>
+                        <li id="menu-item-4554"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4554"><a
+                                href="https://investigacion.lasalle.mx/personal_de_investigacion/#humanidades_y_ciencias_sociales"
+                                data-scroll="true">Humanidades y Ciencias Sociales</a><span
+                                class="pix-dropdown-arrow"></span></li>
+                        <li id="menu-item-4555"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4555"><a
+                                href="https://investigacion.lasalle.mx/personal_de_investigacion/#ingenieria"
+                                data-scroll="true">Ingeniería</a><span class="pix-dropdown-arrow"></span></li>
+                        <li id="menu-item-4556"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4556"><a
+                                href="https://investigacion.lasalle.mx/personal_de_investigacion/#medicina_y_salud"
+                                data-scroll="true">Medicina y Salud</a><span class="pix-dropdown-arrow"></span></li>
+                        <li id="menu-item-4557"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4557"><a
+                                href="https://investigacion.lasalle.mx/personal_de_investigacion/#negocios"
+                                data-scroll="true">Negocios</a><span class="pix-dropdown-arrow"></span></li>
+                    </ul>
+                </li>
+                <li id="menu-item-5092"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5092 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/grupos-de-investigacion/" data-scroll="true"
+                        class="external">Grupos de I+D+i</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-9827"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9827 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/proyectos_de_idi_2023_2024/" data-scroll="true"
+                        class="external">Proyectos de I+D+i</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-5885"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5885 pix-submenu external current-menu-item">
+                    <a href="http://clidi.lasalle.mx/" data-scroll="true" class="external">CLIDi</a><span
+                        class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-4564"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4564 pix-submenu external current-menu-item">
+                    <a href="https://lasalle.mx/investigacion/publicaciones/" data-scroll="true"
+                        class="external">Publicaciones</a><span class="pix-dropdown-arrow"></span>
+                    <ul class="sub-menu">
+                        <li id="menu-item-4565"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4565 external current-menu-item">
+                            <a href="https://repositorio.lasalle.mx/" data-scroll="true" class="external">Repositorio
+                                Institucional</a><span class="pix-dropdown-arrow"></span>
+                        </li>
+                        <li id="menu-item-8279"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8279 external current-menu-item">
+                            <a href="https://investigacion.lasalle.mx/articulos-de-divulgacion-recein/"
+                                data-scroll="true" class="external">Artículos de divulgación RECEIN</a><span
+                                class="pix-dropdown-arrow"></span>
+                        </li>
+                    </ul>
+                </li>
+                <li id="menu-item-23"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/acreditaciones-y-alianzas/" data-scroll="true"
+                        class="external">Convenios y Alianzas</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-7754"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7754 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/repositorio-investigacion-lasalle/" data-scroll="true"
+                        class="external">Repositorio</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-7851"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7851 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/convocatorias/" data-scroll="true"
+                        class="external">Convocatorias</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-8299"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8299 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/reto-futuros-posibles/" data-scroll="true"
+                        class="external">Reto Futuros Posibles</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-10909"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10909 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/verano-investigacion/" data-scroll="true"
+                        class="external">Verano de Investigación</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-6459"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6459 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/sumate-al-equipo/" data-scroll="true"
+                        class="external">Súmate al equipo</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-4574"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4574 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/envivo/" data-scroll="true" class="external">● En
+                        Vivo</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-10588"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10588 pix-submenu external current-menu-item">
+                    <a href="https://investigacion.lasalle.mx/directorio_global/" data-scroll="true"
+                        class="external">Directorio global</a><span class="pix-dropdown-arrow"></span>
+                </li>
+                <li id="menu-item-6232"
+                    class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-6232 pix-submenu">
+                    <a href="#pll_switcher" data-scroll="true"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAflBMVEUAXgnp6ejj49zOAADGAACBvZl+u5Z2t4/9/f36+vrnZ2tmrYNdqXv29vbjR03fQkjjWFy4AABVpHba0LzfOD5PoXHg1sXHsIyDXjzSxq8AUQCrtaONfWn08fHbLTPgTVBInWudrZk7lmHYIymvAAAAQwAANwAAJQDU1NTKxMQZpDQjAAAAaklEQVR4ATXItUEEUAAFsLxvuDc4+2+Fu0ODnFSXMgGBRIguWQS/0YdMZqJFkiIyWFttkk4jqs1kfHcohzG059YetlndUhh1zYF+ZnUVhbpW3A4X6O97be1jDevP1nRoPGUAz9ByFAJZgjmA3Q34KhcIQAAAAABJRU5ErkJggg=="
+                            alt="Español" width="16" height="11" style="width: 16px; height: 11px;" /></a><span
+                        class="pix-dropdown-arrow"></span>
+                    <ul class="sub-menu">
+                        <li id="menu-item-6232-es"
+                            class="lang-item lang-item-42 lang-item-es current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-6232-es external current-menu-item">
+                            <a href="https://investigacion.lasalle.mx/ccrs2026/" lang="es-MX" hreflang="es-MX"
+                                data-scroll="true" class="external"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAflBMVEUAXgnp6ejj49zOAADGAACBvZl+u5Z2t4/9/f36+vrnZ2tmrYNdqXv29vbjR03fQkjjWFy4AABVpHba0LzfOD5PoXHg1sXHsIyDXjzSxq8AUQCrtaONfWn08fHbLTPgTVBInWudrZk7lmHYIymvAAAAQwAANwAAJQDU1NTKxMQZpDQjAAAAaklEQVR4ATXItUEEUAAFsLxvuDc4+2+Fu0ODnFSXMgGBRIguWQS/0YdMZqJFkiIyWFttkk4jqs1kfHcohzG059YetlndUhh1zYF+ZnUVhbpW3A4X6O97be1jDevP1nRoPGUAz9ByFAJZgjmA3Q34KhcIQAAAAABJRU5ErkJggg=="
+                                    alt="Español" width="16" height="11" style="width: 16px; height: 11px;" /></a><span
+                                class="pix-dropdown-arrow"></span>
+                        </li>
+                        <li id="menu-item-6232-en"
+                            class="lang-item lang-item-45 lang-item-en no-translation menu-item menu-item-type-custom menu-item-object-custom menu-item-6232-en external current-menu-item">
+                            <a href="https://investigacion.lasalle.mx/en/home_page/" lang="en-US" hreflang="en-US"
+                                data-scroll="true" class="external"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII="
+                                    alt="English" width="16" height="11" style="width: 16px; height: 11px;" /></a><span
+                                class="pix-dropdown-arrow"></span>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
-    </nav>
+    </div>
 
-    <section id="about" class="section section-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>About The Event</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-content">
-                    <p>The Third Summer School on Control of Complex Robotic Systems (CCRS 2026), is an international academic event for students, researchers,
-                    and faculty interested in advanced robotics and motion control. As robotic systems become more complex, their control demands stronger
-                    tools to address nonlinear dynamics, actuation constraints, environmental interaction, and real-time operation. CCRS 2026 offers an intensive
-                    learning space where participants can engage with current challenges through lectures, simulation, and applied discussions. The school builds
-                    on the success of its previous editions, held by Automatic Control Department at CINVESTAV in Mexico City in 2024 and 2025 under the
-                    academic leadership of Ph.D. Ahmed Chemori and Dr. Jorge Torres Muñoz. In 2026, Universidad La Salle Mexico joins this trajectory as the
-                    new host institution, with Dr. Hipólito Aguilar Sierra serving as organizer from La Salle México. This new edition preserves the scientific strength
-                    of the series while expanding its academic and institutional scope. The program includes lectures on underactuated robotic systems, parallel
-                    manipulators, autonomous underwater vehicles, gait control, wearable rehabilitation exoskeletons, connected robotic systems, and vision and
-                    AI for complex robotics. It also features poster sessions, a MATLAB and Simulink laboratory course, live demonstrations, and a guided visit to
-                    the Innovation iLabs at the Center for Transdisciplinary Research, Development and Innovation (CeTIDi) of La Salle Mexico. In addition, the
-                    Three Minutes Thesis competition for doctoral students creates a valuable opportunity to present research, strengthen communication skills,
-                    and connect with an international robotics community.</p>
-                </div>
-                <div class="about-highlights">
-                    <div style="text-align: center; padding: 15px; background: rgba(0, 47, 95, 0.05); border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                        <p style="font-weight: 600; color: var(--primary-color); margin: 0; font-size: 1.05rem;">
-                            Participation in the CCRS 2026 summer school is completely FREE of charge.
-                        </p>
-                    </div>
+    <div id="content-pusher">
 
-                    <div class="highlight-card">
-                        <i class="fas fa-robot"></i>
-                        <h4>Advanced Robotics</h4>
-                        <p>Underactuated systems, parallel manipulators, and underwater vehicles.</p>
-                    </div>
-                    
-                    <div class="highlight-card">
-                        <i class="fas fa-microchip"></i>
-                        <h4>Motion Control</h4>
-                        <p>Gait control and wearable rehabilitation exoskeletons.</p>
-                    </div>
+        <div class="pix-boxed-content">
+            <p id="back-top" class=" hide-on-mobile"><a href="#top"><span class="pixicon-arrow-angle-up"></span></a></p>
+            <div class="header-wrap background-nav dark  header-line-no ">
 
-                    <div style="text-align: center; padding: 15px; background: rgba(224, 0, 52, 0.05); border-radius: 8px; border-left: 4px solid var(--accent-color);">
-                        <p style="font-weight: 600; color: var(--accent-color); margin: 0; font-size: 1.05rem;">
-                            Registration is subject to Limited availability.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div
+                    class="header-con sticky-light  dark-con  pix-sticky-header pix-sticky-header-scroll-up pix-sticky-header-res menu-header-9 menu-light ">
 
-    <section id="speaker" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Keynote Speaker</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="speaker-profile">
-                <div class="speaker-image-container">
-                    <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Foto_AhmedChemori.jpg" alt="Dr. Ahmed Chemori" class="speaker-img">
-                </div>
-                <div class="speaker-info">
-                    <h3>Dr. Ahmed Chemori</h3>
-                    <p class="speaker-title">Senior Researcher, LIRMM, CNRS / University of Montpellier</p>
-                    <p class="speaker-bio">
-                        Ahmed CHEMORI received the M.Sc. and Ph.D. degrees in automatic control from the Polytechnic Institute of Grenoble, France. He is currently a Senior Researcher at the CNRS in automatic control and robotics, affiliated with LIRMM laboratory. His research interests include nonlinear control (robust, adaptive, and predictive approaches) and their real-time applications in various areas of robotics, including parallel robotics, underwater robotics, wearable robotics, and underactuated systems. He has co-supervised 26 Ph.D. theses and more than 40 M.Sc. theses, and is the author of over 190 scientific publications.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="schedule" class="section section-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Program Schedule</h2>
-                <p class="timezone-note">All times are local to Mexico City (UTC-6).</p>
-                <div class="underline"></div>
-            </div>
 
-            <div class="schedule-tabs">
-                <button class="tab-btn active" data-day="day1">Tue 16/06</button>
-                <button class="tab-btn" data-day="day2">Wed 17/06</button>
-                <button class="tab-btn" data-day="day3">Thu 18/06</button>
-                <button class="tab-btn" data-day="day4">Fri 19/06</button>
-            </div>
+                    <div class="pageTopCon top-header-mobile-hide ">
+                        <div class="container">
+                            <div class="pageTop row">
+                                <div class="pull-left">
+                                    <div class="header-center">
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="header-center">
+                                        <div class="header-elem">
+                                            <p class="social-icons"><a
+                                                    href="https://www.facebook.com/InvestigacionLaSalleMX"
+                                                    target="_blank" title="Facebook" class="facebook"><i
+                                                        class="pixicon-facebook"></i></a><a
+                                                    href="https://www.linkedin.com/school/universidad-la-salle/?lipi=urn%3Ali%3Apage%3Ad_flagship3_university_posts%3BnIFMxK70RjugdsS%2BQC97gQ%3D%3D"
+                                                    target="_blank" title="linkedin" class="linkedin"><i
+                                                        class="pixicon-linked-in"></i></a><a
+                                                    href="https://www.instagram.com/investigacion_lasallemx/"
+                                                    target="_blank" title="Instagram" class="instagram"><i
+                                                        class="pixicon-instagram"></i></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-wrap">
+                        <div class="pix-menu-align-center">
+                            <header class="header">
 
-            <div class="schedule-content">
-                <div class="day-schedule active" id="day1">
-                    <div class="timeline-item">
-                        <div class="time">10:00 - 10:30</div>
-                        <div class="content"><span class="tag event-tag">Main Event</span><h4>Opening Ceremony</h4><p>Eduardo Gómez Ramírez, Sabine Mondié Cuzange, Mélie Cornet</p></div>
-                    </div>
-                    <div class="timeline-item lecture">
-                        <div class="time">10:30 - 12:00</div>
-                        <div class="content"><span class="tag">Lecture 1</span><h4>A comprehensive overview of Robotics Today</h4><p>Speaker: Ahmed Chemori</p></div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">12:00 - 12:30</div>
-                        <div class="content"><span class="tag">General</span><h4>Coffee Break & Poster Session</h4></div>
-                    </div>
-                    <div class="timeline-item lecture">
-                        <div class="time">12:30 - 14:00</div>
-                        <div class="content"><span class="tag">Lecture 2</span><h4>Motion control of underactuated robotic systems</h4><p>Speaker: Ahmed Chemori</p></div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">14:00 - 16:00</div>
-                        <div class="content"><span class="tag">General</span><h4>Lunch</h4></div>
-                    </div>
-                    <div class="timeline-item event">
-                        <div class="time">16:00 - 17:30</div>
-                        <div class="content"><span class="tag event-tag">Lecture</span><h4>Entrepreneurial lecture: How to Deploy and Sustain Connected Complex Robots</h4></div>
-                    </div>
-                </div>
+                                <div class="container">
 
-                <div class="day-schedule" id="day2">
-                    <div class="timeline-item lecture">
-                        <div class="time">10:30 - 12:00</div>
-                        <div class="content"><span class="tag">Lecture 3</span><h4>Motion control of parallel kinematic manipulators</h4><p>Speaker: Ahmed Chemori</p></div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">12:00 - 12:30</div>
-                        <div class="content"><span class="tag">General</span><h4>Coffee Break & Poster Session</h4></div>
-                    </div>
-                    <div class="timeline-item lecture">
-                        <div class="time">12:30 - 14:00</div>
-                        <div class="content"><span class="tag">Lecture 4</span><h4>Motion control of autonomous underwater vehicles</h4><p>Speaker: Ahmed Chemori</p></div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">14:00 - 16:00</div>
-                        <div class="content"><span class="tag">General</span><h4>Lunch</h4></div>
-                    </div>
-                    <div class="timeline-item event">
-                        <div class="time">16:00 - 17:30</div>
-                        <div class="content"><span class="tag event-tag">Visit</span><h4>Guided Visit to the Innovation iLabs at CeTIDi</h4></div>
-                    </div>
-                </div>
+                                    <div id="inner-header" class="wrap col3 clearfix">
 
-                <div class="day-schedule" id="day3">
-                    <div class="timeline-item lecture">
-                        <div class="time">10:30 - 12:00</div>
-                        <div class="content"><span class="tag">Lecture 5</span><h4>On walking gait control: From human to humanoid robots</h4><p>Speaker: Ahmed Chemori</p></div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">12:00 - 12:30</div>
-                        <div class="content"><span class="tag">General</span><h4>Coffee Break & Poster Session</h4></div>
-                    </div>
-                    <div class="timeline-item lecture">
-                        <div class="time">12:30 - 14:00</div>
-                        <div class="content"><span class="tag">Lecture 6</span><h4>Advanced control of wearable rehabilitation exoskeletons</h4><p>Speaker: Ahmed Chemori</p></div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">14:00 - 16:00</div>
-                        <div class="content"><span class="tag">General</span><h4>Lunch</h4></div>
-                    </div>
-                    <div class="timeline-item event">
-                        <div class="time">16:00 - 17:30</div>
-                        <div class="content"><span class="tag event-tag">Demonstration</span><h4>Autonomous Systems Live Demonstrations and Technical Walkthroughs</h4></div>
-                    </div>
-                </div>
+                                        <div class="col-md-4 col-sm-4 left-side">
+                                            <div class="left-side-inner clearfix">
+                                            </div>
+                                        </div>
 
-                <div class="day-schedule" id="day4">
-                    <div class="timeline-item lecture">
-                        <div class="time">10:30 - 12:00</div>
-                        <div class="content"><span class="tag">Lecture 7</span><h4>Laboratory Course (Simulation with MATLAB/Simulink)</h4><p>Speaker: Ahmed Chemori</p></div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">12:00 - 12:30</div>
-                        <div class="content"><span class="tag">General</span><h4>Coffee Break & Poster Session</h4></div>
-                    </div>
-                    <div class="timeline-item event">
-                        <div class="time">12:30 - 14:00</div>
-                        <div class="content"><span class="tag event-tag">Lecture</span><h4>Innovation lecture: Vision and AI for Complex Robotics</h4></div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="time">14:00 - 16:00</div>
-                        <div class="content"><span class="tag">General</span><h4>Lunch</h4></div>
-                    </div>
-                    <div class="timeline-item event">
-                        <div class="time">16:00 - 17:30</div>
-                        <div class="content"><span class="tag event-tag">Main Event</span><h4>Closing Ceremony</h4><p>Speaker: Hipolito Aguilar Sierra</p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="abstracts" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Lecture Abstracts</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="abstracts-list">
-                <details class="abstract-item">
-                    <summary>
-                        <span class="lecture-id">Lecture 1</span>
-                        <span class="lecture-title">A comprehensive overview of Robotics Today</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <div class="abstract-content">
-                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture1_Picture.jpg" alt="Robotics Overview" class="abstract-image">
-                        <p>Robotics is an interdisciplinary branch of engineering that includes mechanical
-                        engineering, electrical engineering, computer engineering, control engineering and others. It deals with design, construction and use of robots,
-                        as well as computer systems for their control, sensory feedback, and information processing. It may overlap with different fields such as
-                        electronics, computer science, mechatronics, artificial intelligence, nanotechnology and bioengineering. Robotics was initially and for a long
-                        time guided by needs in industry. Indeed, the early years of robotics was largely focused on robotic manipulators, mainly used for simple and
-                        repetitive automation tasks. The first industrial robot manipulator appeared in 1961 in the assembly lines of General Motors. Year after year,
-                        the progress of robotics and automation, as well as their associated innovative applications, have been noticed every day through the
-                        consideration of more and more complex tasks needing higher performances; such as those for operating in dangerous and hazardous
-                        environments. These complex and challenging tasks require a deeply understanding of robotic systems in diﬀerent points of view, including
-                        mechanical design, kinematics and dynamic modelling, sensing, actuation, control design, optimization, etc. Nowadays, robotics is highly
-                        advanced, including different fields and applications; namely industrial robotics, mobile robotics, bioinspired robotics, micro-robotics,
-                        humanoid robotics, aerial robotics, space robotics, marine robotics, medical robotics, service robotics, wearable robotics, etc. This talk will
-                        give an overview of most of these robotic fields through various videos illustrating needs, challenges and applications.</p>
-                    </div>
-                </details>
-                <details class="abstract-item">
-                    <summary>
-                        <span class="lecture-id">Lecture 2</span>
-                        <span class="lecture-title">Motion control of underactuated robotic systems</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <div class="abstract-content">
-                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture2_Picture.jpg" alt="Underactuated Systems" class="abstract-image">
-                        <p>Underactuated mechanical systems are those systems with less control inputs
-                        than generalized coordinates (degrees of freedom) i.e. they have generalized coordinates that are not actuated, and this is a source of dynamic
-                        constraints which are generally non integrable and therefore second order non-holonomic. Many examples of such systems exist, mainly in
-                        robotics, they include, among others, the underactuated robot manipulators, the gymnast robots and particularly the acrobot, the pendubot,
-                        the Planar Vertical Takeoﬀ and Landing (PVTOL) aircrajs, some undersea vehicles and other mobile robots. Another basic feature of this class
-                        of systems is the nonlinear dynamics that they have; moreover, their actuated coordinates are nonlinearly coupled with the unactuated
-                        coordinates. This talk deals with control of underactuated mechanical systems, where two main problems have been studied; the first one
-                        concerns stabilization around unstable equilibrium point, whereas the second one deals with stable limit cycle generation. The proposed
-                        control methods are illustrated through numerical simulations as well as real-time experiments on different examples of underactuated
-                        mechanical systems and mainly the inertia wheel inverted pendulum.</p>
-                    </div>
-                </details>
-                <details class="abstract-item">
-                    <summary>
-                        <span class="lecture-id">Lecture 3</span>
-                        <span class="lecture-title">Motion control of parallel kinematic manipulators</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <div class="abstract-content">
-                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture3_Picture.png" alt="Parallel Manipulators" class="abstract-image">
-                        <p>Serial robot manipulators consist of a set of sequentially connected links,
-                        forming an open kinematic chain. These robots are mainly characterized by their large workspace and their high dexterity. However, in order
-                        to perform tasks requiring high speeds/accelerations and high precision; such robots are not always recommended because of their lack of
-                        stiffness and accuracy. Indeed, parallel kinematic manipulators (PKMs) are more suitable for such tasks. The main idea of their mechanical
-                        structure consists in using at least two kinematic chains linking the fixed base to the travelling plate, where each of these chains contains at
-                        least one actuator. This allows for a distribution of the load between the chains. PKMs have important advantages with respect to their serial
-                        counterparts in terms of stiffness, speed, accuracy and payload. However, these robots are characterized by their highly nonlinear dynamics,
-                        actuation redundancy, kinematic redundancy, uncertainties, singularities, etc. Besides, when interested in high speed robotized repetitive
-                        applications, such as food packaging tasks, the key idea relies in looking for short cycle times. This talk will give an overview of some proposed
-                        advanced control solutions for high-speed applications of PKMs in food packaging tasks. The proposed solutions are mainly based on nonlinear
-                        adaptive control techniques and have been validated through real-time experiments on different prototypes.</p>
-                    </div>
-                </details>
-                <details class="abstract-item">
-                    <summary>
-                        <span class="lecture-id">Lecture 4</span>
-                        <span class="lecture-title">Motion control of autonomous underwater vehicles</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <div class="abstract-content">
-                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture4_Picture.png" alt="Underwater Vehicles" class="abstract-image">
-                        <p>Underwater vehicles have gained a widespread interest in the last decades,
-                        from various research communities (design, actuation, perception, modelling, control, etc.), given the multiple tasks they can accomplish.
-                        Their applications are multiple and various in diﬀerent fields such as dams’ inspection, oil and gas industry, fish farms, wind parks, hydroelectric
-                        power stations, underwater archeology, ocean cartography, air crash and environmental investigations, etc. Control of underwater vehicles is
-                        a thoroughly investigated subject but still an open research problem. Indeed, when we are interested in autonomous control of underwater
-                        vehicles (ROVs, AUVs, ASVs, bioinspired, etc.) diﬀerent control challenges may arise. They are mainly due to the inherent high nonlinearities
-                        and time varying behavior of their dynamics subject to hydrodynamic eﬀects and environmental disturbances. This talk will be focused control
-                        challenges of small tethered underwater vehicles and some proposed control solutions. Diﬀerent control solutions, mainly issued from
-                        adaptive control, will be then presented and discussed. All the proposed controllers will be illustrated through real-time experiments on
-                        diﬀerent underwater vehicles.</p>
-                    </div>
-                </details>
-                <details class="abstract-item">
-                    <summary>
-                        <span class="lecture-id">Lecture 5</span>
-                        <span class="lecture-title">On walking gait control: From human to humanoid robots</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <div class="abstract-content">
-                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture5_Picture.jpg" alt="Gait Control" class="abstract-image">
-                        <p>Walking gait control is one of the most important research problems
-                        in humanoid and wearable robotics. Indeed, when interested in walking gait control two inherent challenging issues may arise; namely pattern
-                        generation and control design. This presentation will be focused on the second challenge dealing with control design for dynamic walking. It
-                        will be organized around two main parts; the first one is a general introduction to humanoid robotics, including a brief overview of its basic principles,
-                        before emphasizing the problem formulation involving the two above mentioned challenges. The second part will be devoted to walking gait
-                        control, where this problem is resolved through a human-data-based control architecture for pattern generation and dynamic walking control.
-                        The proposed method in this case deals with whole-body control, where a motion capture system is used to acquire the necessary data to
-                        reproduce human-like motions on a humanoid robot. However, unlike most of the techniques from the literature, where a big amount of data
-                        is used, only feet and CoM positions are needed to describe the most relevant features of a human walking. The redundancy in the humanoid
-                        model is then considered to track these two objects using task formalism. The proposed solution is validated through numerical simulations
-                        as well as real-time experiments on the humanoid robot HOAP3, for different motion scenarios.</p>
-                    </div>
-                </details>
-                <details class="abstract-item">
-                    <summary>
-                        <span class="lecture-id">Lecture 6</span>
-                        <span class="lecture-title">Advanced control of wearable rehabilitation exoskeletons</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <div class="abstract-content">
-                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture6_Picture.jpg" alt="Exoskeletons" class="abstract-image">
-                        <p>Assisting disabled and elderly people in daily activities using wearable
-                        devices has gained a particular interest these last decades due to the highly increasing rate of dependent people. The rise in life expectancy is set to continue; combined with the decrease in birth rates, this should accelerate more the aging of the population. Consequently, this will
-                        certainly have a great impact on the development of assistive wearable devices. Thanks to the latest advances in portable device technologies
-                        in terms of compact/miniaturized design, low cost and energy consumption, their wearability has known an important development. Indeed,
-                        human wearable devices such as exoskeletons, wearable bio-sensors and wearable simulators are no more considered as fiction science.
-                        Furthermore, this field is attracting more and more researchers from different communities (mechanical design, sensors, actuators, control
-                        design, etc.) in the last decade. In terms of data measurement, diﬀerent sensing systems are ojen used in wearable devices, namely EMG
-                        (muscular activities), IMU (human posture), Force sensors (contact with the ground), etc. This talk will be focused on wearables robotics
-                        challenges, recent advances in this field, and some proposed control solutions for exoskeletons. The proposed control solutions will be
-                        illustrated through numerical simulations as well as real-time experiments.</p>
-                    </div>
-                </details>
-                <details class="abstract-item">
-                    <summary>
-                        <span class="lecture-id">Lecture 7</span>
-                        <span class="lecture-title">Laboratory Course (Simulation with MATLAB/Simulink)</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <div class="abstract-content">
-                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture7_Picture.jpg" alt="Simulation Lab" class="abstract-image">
-                        <p>Application of some control schemes, learned in previous lectures, to
-                        robotic systems. The participants will have the choice among various subjects, including:
-                        - Control of a serial robotic manipulator
-                        - Control of an autonomous surface vehicle (USV)
-                        - Control of knee-joint exoskeleton
-                        - Control of an underactuated mechanical system
-                        - Etc.</p>
-                    </div>
-                </details>
-                <details class="abstract-item">
-                    <summary>
-                        <span class="lecture-id">Competition</span>
-                        <span class="lecture-title">3 Minutes Thesis</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <div class="abstract-content">
-                        <p>The 3 Minute Thesis session is a short academic presentation activity for doctoral students within the Summer School. Its purpose is to help
-                        PhD candidates present the core of their research in a clear, engaging, and accessible way within only three minutes. Each student is expected
-                        to explain the problem addressed, the main objective, the proposed approach, and the relevance or impact of the work, using concise and
-                        understandable language for a broad academic audience. This format strengthens scientific communication skills, promotes interdisciplinary
-                        exchange, and gives students an opportunity to share their research progress with peers, faculty, and invited experts in a dynamic and
-                        professional setting. This activity will be held subject to the number of registered participants.</p>
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
+                                        <div class="col-md-4 col-sm-4">
+                                            <div id="logo" class="sticky-logo-yes"><a
+                                                    href="https://investigacion.lasalle.mx/" class="mobile-logo-yes"
+                                                    rel="home" itemprop="url"><img
+                                                        src="http://investigacion.lasalle.mx/wp-content/uploads/2023/02/1_IMAGOTIPO_LASALLE_MEXICO_CALADO-SF_2020.png"
+                                                        data-rjs="http://investigacion.lasalle.mx/wp-content/uploads/2023/02/1_IMAGOTIPO_LASALLE_MEXICO_CALADO-SF_2020.png"
+                                                        alt="Vicerrectoría Investigación" class="dark-logo"><img
+                                                        src="http://investigacion.lasalle.mx/wp-content/uploads/2023/02/1_IMAGOTIPO_LASALLE_MEXICO_CALADO-SF_2020.png"
+                                                        data-rjs="http://investigacion.lasalle.mx/wp-content/uploads/2023/02/1_IMAGOTIPO_LASALLE_MEXICO_CALADO-SF_2020.png"
+                                                        alt="Vicerrectoría Investigación" class="light-logo"><img
+                                                        src="http://investigacion.lasalle.mx/wp-content/uploads/2023/02/4_IMAGOTIPO_LASALLE_MEXICO_COLOR_RGB_2020.png"
+                                                        alt="Vicerrectoría Investigación" class="sticky-logo"><img
+                                                        src="http://investigacion.lasalle.mx/wp-content/uploads/2023/02/1_IMAGOTIPO_LASALLE_MEXICO_CALADO-SF_2020.png"
+                                                        alt="Vicerrectoría Investigación" class="mobile-res-logo"></a>
+                                            </div>
 
-    <section id="organizers" class="section section-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Local Organizing Committee</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="organizers-grid">
-                
-                <div class="organizer-card">
-                    <div class="organizer-img-container">
-                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/foto_drHipolito.png" alt="Dr. Hipólito Aguilar Sierra" class="organizer-img">
-                    </div>
-                    <div class="organizer-info">
-                        <h3>Dr. Hipólito Aguilar Sierra</h3>
-                        <p class="organizer-title">Head of Engineering Department</p>
-                        <p class="organizer-email"><a href="mailto:hipolito.aguilar@lasalle.mx">hipolito.aguilar@lasalle.mx</a></p>
-                    </div>
-                </div>
+                                            <div class="pix-menu">
+                                                <div class="pix-menu-trigger">
+                                                    <span class="mobile-menu">Menu</span>
+                                                </div>
+                                            </div>
 
-                <div class="organizer-card">
-                    <div class="organizer-img-container">
-                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Foto_Victoria.jpeg" alt="Mtra. Victoria Contreras García" class="organizer-img">
-                    </div>
-                    <div class="organizer-info">
-                        <h3>Mtra. Victoria Contreras García</h3>
-                        <p class="organizer-title">Innovation and Technology Transfer</p>
-                        <p class="organizer-email"><a href="mailto:victoria.contreras@lasalle.mx">victoria.contreras@lasalle.mx</a></p>
-                    </div>
-                </div>
+                                        </div>
 
-                <div class="organizer-card">
-                    <div class="organizer-img-container">
-                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/foto_angel.jpeg" alt="Angel Istvan Vela Marquez" class="organizer-img">
-                    </div>
-                    <div class="organizer-info">
-                        <h3>Angel Istvan Vela Marquez</h3>
-                        <p class="organizer-title">Webmaster / Volunteer</p>
-                        <p class="organizer-email"><a href="mailto:angel.vela@lasallistas.org.mx">angel.vela@lasallistas.org.mx</a></p>
+                                        <div class="col-md-4 col-sm-4 right-side">
+                                            <div class="right-side-inner clearfix">
+                                                <div class="header-elem">
+                                                    <div class="search-btn"><i
+                                                            class="pix-icon pixicon-elegant-search"></i>
+                                                        <form method="get" class="topSearchForm"
+                                                            action="https://investigacion.lasalle.mx/"><input
+                                                                type="text" value="" name="s" class="textfield"
+                                                                placeholder="Buscar" autocomplete="off"></form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </header>
+
+                            <div class="menu-wrap">
+
+                                <div class="container">
+                                    <div class="menu-inner-wrap">
+                                        <nav class="main-nav">
+                                            <ul id="menu-main-1" class="menu clearfix">
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/comunidad/"
+                                                        data-scroll="true" class="external">Comunidad</a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5314 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/personal_de_investigacion/"
+                                                        data-scroll="true" class="external">Personal de
+                                                        investigación</a><span class="pix-dropdown-arrow"></span>
+                                                    <ul class="sub-menu">
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4551">
+                                                            <a href="https://investigacion.lasalle.mx/personal_de_investigacion/#famadyc"
+                                                                data-scroll="true">Arquitectura, Diseño y
+                                                                Comunicación</a><span class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4552">
+                                                            <a href="https://investigacion.lasalle.mx/personal_de_investigacion/#ciencias_quimicas"
+                                                                data-scroll="true">Ciencias Químicas</a><span
+                                                                class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4553">
+                                                            <a href="https://investigacion.lasalle.mx/personal_de_investigacion/#derecho"
+                                                                data-scroll="true">Derecho</a><span
+                                                                class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4554">
+                                                            <a href="https://investigacion.lasalle.mx/personal_de_investigacion/#humanidades_y_ciencias_sociales"
+                                                                data-scroll="true">Humanidades y Ciencias
+                                                                Sociales</a><span class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4555">
+                                                            <a href="https://investigacion.lasalle.mx/personal_de_investigacion/#ingenieria"
+                                                                data-scroll="true">Ingeniería</a><span
+                                                                class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4556">
+                                                            <a href="https://investigacion.lasalle.mx/personal_de_investigacion/#medicina_y_salud"
+                                                                data-scroll="true">Medicina y Salud</a><span
+                                                                class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4557">
+                                                            <a href="https://investigacion.lasalle.mx/personal_de_investigacion/#negocios"
+                                                                data-scroll="true">Negocios</a><span
+                                                                class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5092 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/grupos-de-investigacion/"
+                                                        data-scroll="true" class="external">Grupos de I+D+i</a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9827 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/proyectos_de_idi_2023_2024/"
+                                                        data-scroll="true" class="external">Proyectos de I+D+i</a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5885 pix-submenu external current-menu-item">
+                                                    <a href="http://clidi.lasalle.mx/" data-scroll="true"
+                                                        class="external">CLIDi</a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4564 pix-submenu external current-menu-item">
+                                                    <a href="https://lasalle.mx/investigacion/publicaciones/"
+                                                        data-scroll="true" class="external">Publicaciones</a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                    <ul class="sub-menu">
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4565 external current-menu-item">
+                                                            <a href="https://repositorio.lasalle.mx/" data-scroll="true"
+                                                                class="external">Repositorio Institucional</a><span
+                                                                class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8279 external current-menu-item">
+                                                            <a href="https://investigacion.lasalle.mx/articulos-de-divulgacion-recein/"
+                                                                data-scroll="true" class="external">Artículos de
+                                                                divulgación RECEIN</a><span
+                                                                class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/acreditaciones-y-alianzas/"
+                                                        data-scroll="true" class="external">Convenios y
+                                                        Alianzas</a><span class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7754 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/repositorio-investigacion-lasalle/"
+                                                        data-scroll="true" class="external">Repositorio</a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7851 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/convocatorias/"
+                                                        data-scroll="true" class="external">Convocatorias</a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8299 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/reto-futuros-posibles/"
+                                                        data-scroll="true" class="external">Reto Futuros
+                                                        Posibles</a><span class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10909 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/verano-investigacion/"
+                                                        data-scroll="true" class="external">Verano de
+                                                        Investigación</a><span class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6459 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/sumate-al-equipo/"
+                                                        data-scroll="true" class="external">Súmate al equipo</a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4574 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/envivo/"
+                                                        data-scroll="true" class="external">● En Vivo</a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10588 pix-submenu external current-menu-item">
+                                                    <a href="https://investigacion.lasalle.mx/directorio_global/"
+                                                        data-scroll="true" class="external">Directorio global</a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                </li>
+                                                <li
+                                                    class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-6232 pix-submenu">
+                                                    <a href="#pll_switcher" data-scroll="true"><img
+                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAflBMVEUAXgnp6ejj49zOAADGAACBvZl+u5Z2t4/9/f36+vrnZ2tmrYNdqXv29vbjR03fQkjjWFy4AABVpHba0LzfOD5PoXHg1sXHsIyDXjzSxq8AUQCrtaONfWn08fHbLTPgTVBInWudrZk7lmHYIymvAAAAQwAANwAAJQDU1NTKxMQZpDQjAAAAaklEQVR4ATXItUEEUAAFsLxvuDc4+2+Fu0ODnFSXMgGBRIguWQS/0YdMZqJFkiIyWFttkk4jqs1kfHcohzG059YetlndUhh1zYF+ZnUVhbpW3A4X6O97be1jDevP1nRoPGUAz9ByFAJZgjmA3Q34KhcIQAAAAABJRU5ErkJggg=="
+                                                            alt="Español" width="16" height="11"
+                                                            style="width: 16px; height: 11px;" /></a><span
+                                                        class="pix-dropdown-arrow"></span>
+                                                    <ul class="sub-menu">
+                                                        <li
+                                                            class="lang-item lang-item-42 lang-item-es current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-6232-es external current-menu-item">
+                                                            <a href="https://investigacion.lasalle.mx/ccrs2026/"
+                                                                lang="es-MX" hreflang="es-MX" data-scroll="true"
+                                                                class="external"><img
+                                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAflBMVEUAXgnp6ejj49zOAADGAACBvZl+u5Z2t4/9/f36+vrnZ2tmrYNdqXv29vbjR03fQkjjWFy4AABVpHba0LzfOD5PoXHg1sXHsIyDXjzSxq8AUQCrtaONfWn08fHbLTPgTVBInWudrZk7lmHYIymvAAAAQwAANwAAJQDU1NTKxMQZpDQjAAAAaklEQVR4ATXItUEEUAAFsLxvuDc4+2+Fu0ODnFSXMgGBRIguWQS/0YdMZqJFkiIyWFttkk4jqs1kfHcohzG059YetlndUhh1zYF+ZnUVhbpW3A4X6O97be1jDevP1nRoPGUAz9ByFAJZgjmA3Q34KhcIQAAAAABJRU5ErkJggg=="
+                                                                    alt="Español" width="16" height="11"
+                                                                    style="width: 16px; height: 11px;" /></a><span
+                                                                class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                        <li
+                                                            class="lang-item lang-item-45 lang-item-en no-translation menu-item menu-item-type-custom menu-item-object-custom menu-item-6232-en external current-menu-item">
+                                                            <a href="https://investigacion.lasalle.mx/en/home_page/"
+                                                                lang="en-US" hreflang="en-US" data-scroll="true"
+                                                                class="external"><img
+                                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII="
+                                                                    alt="English" width="16" height="11"
+                                                                    style="width: 16px; height: 11px;" /></a><span
+                                                                class="pix-dropdown-arrow"></span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="widget-right">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </section>
 
-    <section id="venue" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Venue & Contact</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="venue-content">
-                <div class="venue-info">
-                    <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/campus1_lasalle.jpeg" alt="Universidad La Salle" class="venue-building-img">
-                    <h3>Universidad La Salle Mexico</h3>
-                    <p class="venue-detail"><i class="fas fa-building"></i> Center for Transdisciplinary Research, Development and Innovation (CeTIDI)</p>
-                    <p class="venue-detail"><i class="fas fa-map-marker-alt"></i> Mexico City, Mexico</p>
-                    <p class="venue-note" style="margin-top: 20px;"><i class="fas fa-envelope"></i> Contact: <a href="mailto:hipolito.aguilar@lasalle.mx">hipolito.aguilar@lasalle.mx</a></p>
+
+
+
+
+            <header id="home" class="hero">
+                <div class="hero-overlay"></div>
+                <div class="container hero-content">
+                    <div class="hero-logos">
+                        <span class="logo-text">La Salle</span>
+                        <span class="divider">|</span>
+                        <span class="logo-text">CINVESTAV</span>
+                        <span class="divider">|</span>
+                        <span class="logo-text">CNRS</span>
+                        <span class="divider">|</span>
+                        <span class="logo-text">LIRMM</span>
+                    </div>
+                    <h2 class="hero-subtitle">The 3<sup>rd</sup> Summer School on</h2>
+                    <h1 class="hero-title">Control of Complex<br>Robotic Systems<br>(CCRS 2026)</h1>
+                    <p class="hero-department"><i class="fas fa-university"></i> Universidad La Salle Mexico</p>
+                    <p class="hero-location"><i class="fas fa-map-marker-alt"></i> Mexico City, Mexico</p>
+                    <p class="hero-dates"><i class="far fa-calendar-alt"></i> June 16 - 19, 2026</p>
+                    <p class="hero-onsite">Participation ON SITE for CCRS</p>
+
+                    <div class="hero-important-dates">
+                        <p><strong>Important Dates:</strong></p>
+                        <p>Registration Open: April 13, 2026</p>
+                        <p>Deadline: June 1, 2026</p>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#schedule" class="btn btn-primary">View Schedule</a>
+                        <a href="https://forms.gle/mRayHSLircz5f7ms8" target="_blank" class="btn btn-secondary">Register
+                            Now</a>
+                    </div>
+
+                    <p class="hero-limit-note">*REGISTRATION IS LIMITED.</p>
                 </div>
-                <div class="venue-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.6617061730595!2d-99.1824706!3d19.4054452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff500441d8e9%3A0xc392120b66e3fb24!2sUniversidad%20La%20Salle%20M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx6" width="100%" height="100%" style="border:0; min-height: 400px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </header>
+            <nav class="navbar" id="navbar">
+                <div class="container nav-container">
+                    <a href="#home" class="logo">
+                        <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_LaSalle.png"
+                            alt="La Salle Logo">
+                    </a>
+                    <button class="menu-toggle" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#speaker">Speaker</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#abstracts">Abstracts</a></li>
+                        <li><a href="#organizers">Organizers</a></li>
+                        <li><a href="#sponsors">Sponsors</a></li>
+                        <li><a href="#venue">Venue</a></li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-    </section>
+            </nav>
 
-    <section id="sponsors" class="section section-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Event Sponsors & Organizers</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="sponsors-grid">
-                <div class="sponsor-item"><img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_LaSalle.png" alt="Universidad La Salle"></div>
-                <div class="sponsor-item"><img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_CNRS.jpg" alt="CNRS"></div>
-                <div class="sponsor-item"><img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_LIRMM.png" alt="LIRMM"></div>
-                <div class="sponsor-item"><img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_UniMontpellier.jpg" alt="University of Montpellier"></div>
-                <div class="sponsor-item"><img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_Cinvestav.png" alt="CINVESTAV"></div>
-                <div class="sponsor-item"><img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_DCA.jpg" alt="DCA"></div>
-                <div class="sponsor-item"><img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_VLI.png" alt="RedLate"></div>
-                <div class="sponsor-item"><img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_VI.png" alt="RedLate"></div>
-                <div class="sponsor-item"><img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_CopaBotMX.png" alt="RedLate"></div>
-                <div class="sponsor-item"><img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_RedLate.png" alt="RedLate"></div>
+            <section id="about" class="section section-light">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>About The Event</h2>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="about-grid">
+                        <div class="about-content">
+                            <p>The Third Summer School on Control of Complex Robotic Systems (CCRS 2026), is an
+                                international academic event for students, researchers, and faculty interested in
+                                advanced robotics and motion control. As robotic systems become more complex, their
+                                control demands stronger tools to address nonlinear dynamics, actuation constraints,
+                                environmental interaction, and real-time operation. CCRS 2026 offers an intensive
+                                learning space where participants can engage with current challenges through lectures,
+                                simulation, and applied discussions.</p>
+                            <p>The school builds on the success of its previous editions, held by Automatic Control
+                                Department at CINVESTAV in Mexico City in 2024 and 2025 under the academic leadership of
+                                Ph.D. Ahmed Chemori and Dr. Jorge Torres Muñoz. In 2026, Universidad La Salle Mexico
+                                joins this trajectory as the new host institution, with Dr. Hipólito Aguilar Sierra
+                                serving as organizer from La Salle México. This new edition preserves the scientific
+                                strength of the series while expanding its academic and institutional scope.</p>
+                            <p>The program includes lectures on underactuated robotic systems, parallel manipulators,
+                                autonomous underwater vehicles, gait control, wearable rehabilitation exoskeletons,
+                                connected robotic systems, and vision and AI for complex robotics. It also features
+                                poster sessions, a MATLAB and Simulink laboratory course, live demonstrations, and a
+                                guided visit to the Innovation iLabs at the Center for Transdisciplinary Research,
+                                Development and Innovation (CeTIDi) of La Salle Mexico.</p>
+                            <p>In addition, the Three Minutes Thesis competition for doctoral students creates a
+                                valuable opportunity to present research, strengthen communication skills, and connect
+                                with an international robotics community.</p>
+                        </div>
+                        <div class="about-highlights">
+                            <div
+                                style="text-align: center; padding: 15px; background: rgba(0, 47, 95, 0.05); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                                <p
+                                    style="font-weight: 600; color: var(--primary-color); margin: 0; font-size: 1.25rem;">
+                                    Participation ON SITE in the CCRS 2026 summer school is completely FREE of charge.
+                                </p>
+                            </div>
 
-            </div>
-        </div>
-    </section>
+                            <div class="highlight-card">
+                                <i class="fas fa-robot"></i>
+                                <h4>Advanced Robotics</h4>
+                                <p>Underactuated systems, parallel manipulators, and underwater vehicles.</p>
+                            </div>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <h3>CCRS 2026</h3>
-            </div>
-            <p>© 2026 Summer School on Control of Complex Robotic Systems. All rights reserved.</p>
-        </div>
-    </footer>
+                            <div class="highlight-card">
+                                <i class="fas fa-microchip"></i>
+                                <h4>Motion Control</h4>
+                                <p>Gait control and wearable rehabilitation exoskeletons.</p>
+                            </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 1. LÓGICA DE NAVEGACIÓN (Ocultar y Mostrar)
-        const allSections = document.querySelectorAll('section.section'); // Ya NO incluimos el header
-        const navLinks = document.querySelectorAll('.nav-links li a');
-        const navbar = document.querySelector('.navbar');
+                            <div
+                                style="text-align: center; padding: 15px; background: rgba(224, 0, 52, 0.05); border-radius: 8px; border-left: 4px solid var(--accent-color);">
+                                <p style="font-weight: 600; color: var(--accent-color); margin: 0; font-size: 1.25rem;">
+                                    Registration is subject to Limited availability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        function showSection(targetId) {
-            if (targetId === 'home') {
-                // Si tocan Home, ocultamos todo el contenido y subimos a la portada
-                allSections.forEach(sec => sec.classList.add('spa-hidden'));
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else {
-                // Ocultamos todas las secciones de contenido
-                allSections.forEach(sec => sec.classList.add('spa-hidden'));
-                
-                // Mostramos SOLO a la que le dieron clic
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.classList.remove('spa-hidden');
-                }
-                
-                // Hacemos scroll suave para que la barra quede arriba y puedan leer el contenido
-                window.scrollTo({ top: navbar.offsetTop, behavior: 'smooth' });
-            }
+            <section id="speaker" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Invited Keynote Speaker</h2>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="speaker-profile">
+                        <div class="speaker-image-container">
+                            <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Foto_AhmedChemori.jpg"
+                                alt="Dr. Ahmed Chemori" class="speaker-img">
+                        </div>
+                        <div class="speaker-info">
+                            <h3>Dr. Ahmed Chemori</h3>
+                            <p class="speaker-title">Senior Researcher, LIRMM, CNRS / University of Montpellier</p>
+                            <p class="speaker-bio">
+                                Ahmed CHEMORI received the M.Sc. and Ph.D. degrees in automatic control from the
+                                Polytechnic Institute of Grenoble, France, in 2001 and 2005, respectively. During the
+                                2004-2005 academic year, he was a Research and Teaching Assistant at the Laboratoire de
+                                Signaux et Systèmes (LSS, CentraleSupélec) and at Université Paris 11. He subsequently
+                                joined GIPSA-lab (formerly LAG) as a CNRS postdoctoral researcher. He is currently a
+                                Senior Researcher at the CNRS in automatic control and robotics, affiliated with LIRMM
+                                laboratory. His research interests include nonlinear control (robust, adaptive, and
+                                predictive approaches) and their real-time applications in various areas of robotics,
+                                including parallel robotics, underwater robotics, wearable robotics, and underactuated
+                                systems. He is the author or co-author of more than 190 scientific publications,
+                                including journal articles, patents, books, book chapters, and conference proceedings.
+                                He has co-supervised 26 Ph.D. theses (including 21 defended) and more than 40 M.Sc.
+                                theses. He currently serves as a Technical Editor for the journal IEEE/ASME Transactions
+                                on Mechatronics. He has also served as a TPC/IPC member and Associate Editor for several
+                                international conferences, including IEEE IROS, IEEE RO-MAN, IFAC ALCOS, IFAC CAMS, and
+                                the IFAC World Congress, among others, and has organized multiple scientific events. He
+                                is an IEEE Senior Member and an IFAC member of Technical Committees TC1.2 (Adaptive and
+                                Learning Systems), TC4.2 (Mechatronic Systems), TC4.3 (Robotics), and TC7.2 (Marine
+                                Systems).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            // Cambiamos el color al botón activo
-            navLinks.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === '#' + targetId) {
-                    a.classList.add('active');
-                }
-            });
-        }
+            <section id="schedule" class="section section-light">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Program Schedule</h2>
+                        <p class="timezone-note">All times are local to Mexico City (UTC-6).</p>
+                        <div class="underline"></div>
+                    </div>
 
-        // Escuchar clics en el menú
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                showSection(targetId);
-            });
-        });
+                    <div class="schedule-tabs">
+                        <button class="tab-btn active" data-day="day1">Tue 16/06</button>
+                        <button class="tab-btn" data-day="day2">Wed 17/06</button>
+                        <button class="tab-btn" data-day="day3">Thu 18/06</button>
+                        <button class="tab-btn" data-day="day4">Fri 19/06</button>
+                    </div>
 
-        // Hacer que el botón de "View Schedule" en la portada también funcione
-        const viewScheduleBtn = document.querySelector('a[href="#schedule"].btn-primary');
-        if(viewScheduleBtn) {
-            viewScheduleBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                showSection('schedule');
-            });
-        }
+                    <div class="schedule-content">
+                        <div class="day-schedule active" id="day1">
+                            <div class="timeline-item">
+                                <div class="time">10:00 - 10:30</div>
+                                <div class="content"><span class="tag event-tag">Main Event</span>
+                                    <h4>Opening Ceremony</h4>
+                                    <p><span style="color: red; font-weight: bold;">Hipólito Aguilar
+                                            Sierra</span><br>Head of Engineering Department, Universidad La Salle México
+                                    </p>
+                                    <p><span style="color: red; font-weight: bold;">Eduardo Gómez
+                                            Ramírez</span><br>Vice-Rector for Research, Universidad La Salle México</p>
+                                    <p><span style="color: red; font-weight: bold;">Sabine Mondié Cuzange</span><br>Head
+                                        of Automatic Control Department, CINVESTAV</p>
+                                    <p><span style="color: red; font-weight: bold;">Mélie Cornet</span><br>Scientific
+                                        and technological attaché, French Embassy in Mexico</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item lecture">
+                                <div class="time">10:30 - 12:00</div>
+                                <div class="content"><span class="tag">Lecture 1</span>
+                                    <h4>A comprehensive overview of Robotics Today</h4>
+                                    <p>Lecturer: <span style="color: red; font-weight: bold;">Ahmed Chemori</span></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">12:00 - 12:30</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Coffee Break & Poster Session</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item lecture">
+                                <div class="time">12:30 - 14:00</div>
+                                <div class="content"><span class="tag">Lecture 2</span>
+                                    <h4>Motion control of underactuated robotic systems</h4>
+                                    <p>Speaker: <span style="color: red; font-weight: bold;">Ahmed Chemori</span></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">14:00 - 16:00</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Lunch</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item event">
+                                <div class="time">16:00 - 17:30</div>
+                                <div class="content"><span class="tag event-tag">Visit</span>
+                                    <h4>Guided Visit to the Innovation iLabs at the Center for Transdisciplinary
+                                        Research, Development and Innovation (CeTiDi)</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">17:30 - 18:00</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item event">
+                                <div class="time">18:00 - 19:00</div>
+                                <div class="content"><span class="tag event-tag">Visit</span>
+                                    <h4>Guided Visit to the Innovation iLabs at the Center for Transdisciplinary
+                                        Research, Development and Innovation (CeTiDi)</h4>
+                                </div>
+                            </div>
+                        </div>
 
-        // Iniciar página mostrando solo la portada
-        showSection('home');
+                        <div class="day-schedule" id="day2">
+                            <div class="timeline-item lecture">
+                                <div class="time">10:30 - 12:00</div>
+                                <div class="content"><span class="tag">Lecture 3</span>
+                                    <h4>Motion control of parallel kinematic manipulators</h4>
+                                    <p>Speaker: <span style="color: red; font-weight: bold;">Ahmed Chemori</span></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">12:00 - 12:30</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Coffee Break & Poster Session</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item lecture">
+                                <div class="time">12:30 - 14:00</div>
+                                <div class="content"><span class="tag">Lecture 4</span>
+                                    <h4>Motion control of autonomous underwater vehicles</h4>
+                                    <p>Speaker: <span style="color: red; font-weight: bold;">Ahmed Chemori</span></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">14:00 - 16:00</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Lunch</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item event">
+                                <div class="time">16:00 - 17:30</div>
+                                <div class="content"><span class="tag event-tag">Lecture</span>
+                                    <h4>Entrepreneurial lecture: How to Deploy and Sustain Connected Complex Robots</h4>
+                                    <p>Speaker: <span style="color: red; font-weight: bold;"><!-- TBD --></span></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">17:30 - 18:00</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item event">
+                                <div class="time">18:00 - 19:00</div>
+                                <div class="content"><span class="tag event-tag">Main Event</span>
+                                    <h4>Three Minutes Thesis (3MT)</h4>
+                                    <p>A short academic presentation activity for PhD students within the Summer School.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-            // 2. FUNCIONALIDAD DE LAS PESTAÑAS (Tabs de Horarios - Se mantiene igual)
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const daySchedules = document.querySelectorAll('.day-schedule');
+                        <div class="day-schedule" id="day3">
+                            <div class="timeline-item lecture">
+                                <div class="time">10:30 - 12:00</div>
+                                <div class="content"><span class="tag">Lecture 5</span>
+                                    <h4>On walking gait control: From human to humanoid robots</h4>
+                                    <p>Speaker: <span style="color: red; font-weight: bold;">Ahmed Chemori</span></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">12:00 - 12:30</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Coffee Break & Poster Session</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item lecture">
+                                <div class="time">12:30 - 14:00</div>
+                                <div class="content"><span class="tag">Lecture 6</span>
+                                    <h4>Advanced control of wearable rehabilitation exoskeletons</h4>
+                                    <p>Speaker: <span style="color: red; font-weight: bold;">Ahmed Chemori</span></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">14:00 - 16:00</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Lunch</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item event">
+                                <div class="time">16:00 - 17:30</div>
+                                <div class="content"><span class="tag event-tag">Demonstration</span>
+                                    <h4>Demonstration Session</h4>
+                                    <p>Autonomous Systems Demonstrations and Technical Walkthroughs</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">17:30 - 18:00</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item event">
+                                <div class="time">18:00 - 19:00</div>
+                                <div class="content"><span class="tag event-tag">Demonstration</span>
+                                    <h4>Demonstration Session</h4>
+                                    <p>Autonomous Systems Demonstrations and Technical Walkthroughs</p>
+                                </div>
+                            </div>
+                        </div>
 
-            if (tabBtns.length > 0 && daySchedules.length > 0) {
-                tabBtns.forEach(btn => {
-                    btn.addEventListener('click', function() {
-                        tabBtns.forEach(b => b.classList.remove('active'));
-                        daySchedules.forEach(s => s.classList.remove('active'));
-                        this.classList.add('active');
-                        
-                        const targetId = this.getAttribute('data-day');
-                        const targetSchedule = document.getElementById(targetId);
-                        if (targetSchedule) targetSchedule.classList.add('active');
+                        <div class="day-schedule" id="day4">
+                            <div class="timeline-item lecture">
+                                <div class="time">10:30 - 12:00</div>
+                                <div class="content"><span class="tag">Lecture 7</span>
+                                    <h4>Laboratory Course (Simulation with MATLAB/Simulink)</h4>
+                                    <p>Speaker: <span style="color: red; font-weight: bold;">Ahmed Chemori</span></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">12:00 - 12:30</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Coffee Break & Poster Session</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item lecture">
+                                <div class="time">12:30 - 14:00</div>
+                                <div class="content"><span class="tag">Lecture 7</span>
+                                    <h4>Laboratory Course (Simulation with MATLAB/Simulink)</h4>
+                                    <p>Speaker: <span style="color: red; font-weight: bold;">Ahmed Chemori</span></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">14:00 - 16:00</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Lunch</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item event">
+                                <div class="time">16:00 - 17:30</div>
+                                <div class="content"><span class="tag event-tag">Lecture</span>
+                                    <h4>Innovation lecture: Vision and AI for Complex Robotics</h4>
+                                    <p>Speaker: <span style="color: red; font-weight: bold;"><!-- TBD --></span></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="time">17:30 - 18:00</div>
+                                <div class="content"><span class="tag">General</span>
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="timeline-item event">
+                                <div class="time">18:00 - 19:00</div>
+                                <div class="content"><span class="tag event-tag">Main Event</span>
+                                    <h4>Closing Ceremony</h4>
+                                    <p>Best Poster Award<br>3MT Award</p>
+                                    <p>Speaker: <span style="color: red; font-weight: bold;">Hipólito Aguilar
+                                            Sierra</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="abstracts" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Lecture Abstracts</h2>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="abstracts-list">
+                        <details class="abstract-item">
+                            <summary>
+                                <span class="lecture-id">Lecture 1</span>
+                                <span class="lecture-title">A comprehensive overview of Robotics Today</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <div class="abstract-content">
+                                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture1_Picture.jpg"
+                                    alt="Robotics Overview" class="abstract-image">
+                                <p>Robotics is an interdisciplinary branch of engineering that includes mechanical
+                                    engineering, electrical engineering, computer engineering, control engineering and
+                                    others. It deals with design, construction and use of robots,
+                                    as well as computer systems for their control, sensory feedback, and information
+                                    processing. It may overlap with different fields such as
+                                    electronics, computer science, mechatronics, artificial intelligence, nanotechnology
+                                    and bioengineering. Robotics was initially and for a long
+                                    time guided by needs in industry. Indeed, the early years of robotics was largely
+                                    focused on robotic manipulators, mainly used for simple and
+                                    repetitive automation tasks. The first industrial robot manipulator appeared in 1961
+                                    in the assembly lines of General Motors. Year after year,
+                                    the progress of robotics and automation, as well as their associated innovative
+                                    applications, have been noticed every day through the
+                                    consideration of more and more complex tasks needing higher performances; such as
+                                    those for operating in dangerous and hazardous
+                                    environments. These complex and challenging tasks require a deeply understanding of
+                                    robotic systems in diﬀerent points of view, including
+                                    mechanical design, kinematics and dynamic modelling, sensing, actuation, control
+                                    design, optimization, etc. Nowadays, robotics is highly
+                                    advanced, including different fields and applications; namely industrial robotics,
+                                    mobile robotics, bioinspired robotics, micro-robotics,
+                                    humanoid robotics, aerial robotics, space robotics, marine robotics, medical
+                                    robotics, service robotics, wearable robotics, etc. This talk will
+                                    give an overview of most of these robotic fields through various videos illustrating
+                                    needs, challenges and applications.</p>
+                            </div>
+                        </details>
+                        <details class="abstract-item">
+                            <summary>
+                                <span class="lecture-id">Lecture 2</span>
+                                <span class="lecture-title">Motion control of underactuated robotic systems</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <div class="abstract-content">
+                                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture2_Picture.jpg"
+                                    alt="Underactuated Systems" class="abstract-image">
+                                <p>Underactuated mechanical systems are those systems with less control inputs
+                                    than generalized coordinates (degrees of freedom) i.e. they have generalized
+                                    coordinates that are not actuated, and this is a source of dynamic
+                                    constraints which are generally non integrable and therefore second order
+                                    non-holonomic. Many examples of such systems exist, mainly in
+                                    robotics, they include, among others, the underactuated robot manipulators, the
+                                    gymnast robots and particularly the acrobot, the pendubot,
+                                    the Planar Vertical Takeoﬀ and Landing (PVTOL) aircrajs, some undersea vehicles and
+                                    other mobile robots. Another basic feature of this class
+                                    of systems is the nonlinear dynamics that they have; moreover, their actuated
+                                    coordinates are nonlinearly coupled with the unactuated
+                                    coordinates. This talk deals with control of underactuated mechanical systems, where
+                                    two main problems have been studied; the first one
+                                    concerns stabilization around unstable equilibrium point, whereas the second one
+                                    deals with stable limit cycle generation. The proposed
+                                    control methods are illustrated through numerical simulations as well as real-time
+                                    experiments on different examples of underactuated
+                                    mechanical systems and mainly the inertia wheel inverted pendulum.</p>
+                            </div>
+                        </details>
+                        <details class="abstract-item">
+                            <summary>
+                                <span class="lecture-id">Lecture 3</span>
+                                <span class="lecture-title">Motion control of parallel kinematic manipulators</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <div class="abstract-content">
+                                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture3_Picture.png"
+                                    alt="Parallel Manipulators" class="abstract-image">
+                                <p>Serial robot manipulators consist of a set of sequentially connected links,
+                                    forming an open kinematic chain. These robots are mainly characterized by their
+                                    large workspace and their high dexterity. However, in order
+                                    to perform tasks requiring high speeds/accelerations and high precision; such robots
+                                    are not always recommended because of their lack of
+                                    stiffness and accuracy. Indeed, parallel kinematic manipulators (PKMs) are more
+                                    suitable for such tasks. The main idea of their mechanical
+                                    structure consists in using at least two kinematic chains linking the fixed base to
+                                    the travelling plate, where each of these chains contains at
+                                    least one actuator. This allows for a distribution of the load between the chains.
+                                    PKMs have important advantages with respect to their serial
+                                    counterparts in terms of stiffness, speed, accuracy and payload. However, these
+                                    robots are characterized by their highly nonlinear dynamics,
+                                    actuation redundancy, kinematic redundancy, uncertainties, singularities, etc.
+                                    Besides, when interested in high speed robotized repetitive
+                                    applications, such as food packaging tasks, the key idea relies in looking for short
+                                    cycle times. This talk will give an overview of some proposed
+                                    advanced control solutions for high-speed applications of PKMs in food packaging
+                                    tasks. The proposed solutions are mainly based on nonlinear
+                                    adaptive control techniques and have been validated through real-time experiments on
+                                    different prototypes.</p>
+                            </div>
+                        </details>
+                        <details class="abstract-item">
+                            <summary>
+                                <span class="lecture-id">Lecture 4</span>
+                                <span class="lecture-title">Motion control of autonomous underwater vehicles</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <div class="abstract-content">
+                                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture4_Picture.png"
+                                    alt="Underwater Vehicles" class="abstract-image">
+                                <p>Underwater vehicles have gained a widespread interest in the last decades,
+                                    from various research communities (design, actuation, perception, modelling,
+                                    control, etc.), given the multiple tasks they can accomplish.
+                                    Their applications are multiple and various in diﬀerent fields such as dams’
+                                    inspection, oil and gas industry, fish farms, wind parks, hydroelectric
+                                    power stations, underwater archeology, ocean cartography, air crash and
+                                    environmental investigations, etc. Control of underwater vehicles is
+                                    a thoroughly investigated subject but still an open research problem. Indeed, when
+                                    we are interested in autonomous control of underwater
+                                    vehicles (ROVs, AUVs, ASVs, bioinspired, etc.) diﬀerent control challenges may
+                                    arise. They are mainly due to the inherent high nonlinearities
+                                    and time varying behavior of their dynamics subject to hydrodynamic eﬀects and
+                                    environmental disturbances. This talk will be focused control
+                                    challenges of small tethered underwater vehicles and some proposed control
+                                    solutions. Diﬀerent control solutions, mainly issued from
+                                    adaptive control, will be then presented and discussed. All the proposed controllers
+                                    will be illustrated through real-time experiments on
+                                    diﬀerent underwater vehicles.</p>
+                            </div>
+                        </details>
+                        <details class="abstract-item">
+                            <summary>
+                                <span class="lecture-id">Lecture 5</span>
+                                <span class="lecture-title">On walking gait control: From human to humanoid
+                                    robots</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <div class="abstract-content">
+                                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture5_Picture.jpg"
+                                    alt="Gait Control" class="abstract-image">
+                                <p>Walking gait control is one of the most important research problems
+                                    in humanoid and wearable robotics. Indeed, when interested in walking gait control
+                                    two inherent challenging issues may arise; namely pattern
+                                    generation and control design. This presentation will be focused on the second
+                                    challenge dealing with control design for dynamic walking. It
+                                    will be organized around two main parts; the first one is a general introduction to
+                                    humanoid robotics, including a brief overview of its basic principles,
+                                    before emphasizing the problem formulation involving the two above mentioned
+                                    challenges. The second part will be devoted to walking gait
+                                    control, where this problem is resolved through a human-data-based control
+                                    architecture for pattern generation and dynamic walking control.
+                                    The proposed method in this case deals with whole-body control, where a motion
+                                    capture system is used to acquire the necessary data to
+                                    reproduce human-like motions on a humanoid robot. However, unlike most of the
+                                    techniques from the literature, where a big amount of data
+                                    is used, only feet and CoM positions are needed to describe the most relevant
+                                    features of a human walking. The redundancy in the humanoid
+                                    model is then considered to track these two objects using task formalism. The
+                                    proposed solution is validated through numerical simulations
+                                    as well as real-time experiments on the humanoid robot HOAP3, for different motion
+                                    scenarios.</p>
+                            </div>
+                        </details>
+                        <details class="abstract-item">
+                            <summary>
+                                <span class="lecture-id">Lecture 6</span>
+                                <span class="lecture-title">Advanced control of wearable rehabilitation
+                                    exoskeletons</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <div class="abstract-content">
+                                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture6_Picture.jpg"
+                                    alt="Exoskeletons" class="abstract-image">
+                                <p>Assisting disabled and elderly people in daily activities using wearable
+                                    devices has gained a particular interest these last decades due to the highly
+                                    increasing rate of dependent people. The rise in life expectancy is set to continue;
+                                    combined with the decrease in birth rates, this should accelerate more the aging of
+                                    the population. Consequently, this will
+                                    certainly have a great impact on the development of assistive wearable devices.
+                                    Thanks to the latest advances in portable device technologies
+                                    in terms of compact/miniaturized design, low cost and energy consumption, their
+                                    wearability has known an important development. Indeed,
+                                    human wearable devices such as exoskeletons, wearable bio-sensors and wearable
+                                    simulators are no more considered as fiction science.
+                                    Furthermore, this field is attracting more and more researchers from different
+                                    communities (mechanical design, sensors, actuators, control
+                                    design, etc.) in the last decade. In terms of data measurement, diﬀerent sensing
+                                    systems are ojen used in wearable devices, namely EMG
+                                    (muscular activities), IMU (human posture), Force sensors (contact with the ground),
+                                    etc. This talk will be focused on wearables robotics
+                                    challenges, recent advances in this field, and some proposed control solutions for
+                                    exoskeletons. The proposed control solutions will be
+                                    illustrated through numerical simulations as well as real-time experiments.</p>
+                            </div>
+                        </details>
+                        <details class="abstract-item">
+                            <summary>
+                                <span class="lecture-id">Lecture 7</span>
+                                <span class="lecture-title">Laboratory Course (Simulation with MATLAB/Simulink)</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <div class="abstract-content">
+                                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Lecture7_Picture.jpg"
+                                    alt="Simulation Lab" class="abstract-image">
+                                <p>Application of some control schemes, learned in previous lectures, to
+                                    robotic systems. The participants will have the choice among various subjects,
+                                    including:
+                                    - Control of a serial robotic manipulator
+                                    - Control of an autonomous surface vehicle (USV)
+                                    - Control of knee-joint exoskeleton
+                                    - Control of an underactuated mechanical system
+                                    - Etc.</p>
+                            </div>
+                        </details>
+                        <details class="abstract-item">
+                            <summary>
+                                <span class="lecture-id">Competition</span>
+                                <span class="lecture-title">3 Minutes Thesis</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <div class="abstract-content">
+                                <p>The 3 Minute Thesis session is a short academic presentation activity for doctoral
+                                    students within the Summer School. Its purpose is to help
+                                    PhD candidates present the core of their research in a clear, engaging, and
+                                    accessible way within only three minutes. Each student is expected
+                                    to explain the problem addressed, the main objective, the proposed approach, and the
+                                    relevance or impact of the work, using concise and
+                                    understandable language for a broad academic audience. This format strengthens
+                                    scientific communication skills, promotes interdisciplinary
+                                    exchange, and gives students an opportunity to share their research progress with
+                                    peers, faculty, and invited experts in a dynamic and
+                                    professional setting. This activity will be held subject to the number of registered
+                                    participants.</p>
+                            </div>
+                        </details>
+                        <details class="abstract-item">
+                            <summary>
+                                <span class="lecture-id">Poster Session</span>
+                                <span class="lecture-title">Poster Session</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </summary>
+                            <div class="abstract-content">
+                                <p>Each day features a coffee break combined with a poster session. Researchers and
+                                    students are invited to showcase their work on topics such as motion control,
+                                    nonlinear control, wearable robotics, underwater robotics, parallel manipulators,
+                                    human-robot interaction and AI for complex robots. Guidelines for poster dimensions
+                                    and submission deadlines will be provided. The best poster will be recognized during
+                                    the closing ceremony.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <section id="organizers" class="section section-light">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Local Organizing Committee</h2>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="organizers-grid">
+
+                        <div class="organizer-card">
+                            <div class="organizer-img-container">
+                                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/foto_drHipolito.png"
+                                    alt="Dr. Hipólito Aguilar Sierra" class="organizer-img">
+                            </div>
+                            <div class="organizer-info">
+                                <h3>Dr. Hipólito Aguilar Sierra</h3>
+                                <p class="organizer-title">Head of Engineering Department</p>
+                                <p class="organizer-email"><a
+                                        href="mailto:hipolito.aguilar@lasalle.mx">hipolito.aguilar@lasalle.mx</a></p>
+                            </div>
+                        </div>
+
+                        <div class="organizer-card">
+                            <div class="organizer-img-container">
+                                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Foto_Victoria.png"
+                                    alt="Mtra. Victoria Contreras García" class="organizer-img">
+                            </div>
+                            <div class="organizer-info">
+                                <h3>Mtra. Victoria Contreras García</h3>
+                                <p class="organizer-title">Innovation and Technology Transfer</p>
+                                <p class="organizer-email"><a
+                                        href="mailto:victoria.contreras@lasalle.mx">victoria.contreras@lasalle.mx</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="organizer-card">
+                            <div class="organizer-img-container">
+                                <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/foto_angel.jpeg"
+                                    alt="Angel Istvan Vela Marquez" class="organizer-img">
+                            </div>
+                            <div class="organizer-info">
+                                <h3>Angel Istvan Vela Marquez</h3>
+                                <p class="organizer-title">Webmaster / Volunteer</p>
+                                <p class="organizer-email"><a
+                                        href="mailto:angel.vela@lasallistas.org.mx">angel.vela@lasallistas.org.mx</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="venue" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Venue & Contact</h2>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="venue-content">
+                        <div class="venue-info">
+                            <img src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/campus1_lasalle.jpeg"
+                                alt="Universidad La Salle" class="venue-building-img">
+                            <h3>Universidad La Salle Mexico</h3>
+                            <p class="venue-detail"><i class="fas fa-building"></i> Center for Transdisciplinary
+                                Research, Development and Innovation (CeTIDI)</p>
+                            <p class="venue-detail"><i class="fas fa-map-marker-alt"></i> Mexico City, Mexico</p>
+                            <p class="venue-note" style="margin-top: 20px;"><i class="fas fa-envelope"></i> Contact: <a
+                                    href="mailto:hipolito.aguilar@lasalle.mx">hipolito.aguilar@lasalle.mx</a></p>
+                        </div>
+                        <div class="venue-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2346.247466425777!2d-99.18325138058454!3d19.409303540180222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff000df11e3d%3A0x3e710fb2c4cecec1!2sCentro%20Transdisciplinario%20de%20Investigaci%C3%B3n%20Desarrollo%20e%20innovaci%C3%B3n%20Universidad%20La%20Salle!5e0!3m2!1sen!2smx!4v1774293642429!5m2!1sen!2smx"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sponsors" class="section section-light">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Event Sponsors & Organizers</h2>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="sponsors-grid">
+                        <div class="sponsor-item"><img
+                                src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_LaSalle.png"
+                                alt="Universidad La Salle"></div>
+                        <div class="sponsor-item"><img
+                                src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_CNRS.jpg"
+                                alt="CNRS"></div>
+                        <div class="sponsor-item"><img
+                                src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_LIRMM.png"
+                                alt="LIRMM"></div>
+                        <div class="sponsor-item"><img
+                                src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_UniMontpellier.jpg"
+                                alt="University of Montpellier"></div>
+                        <div class="sponsor-item"><img
+                                src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_Cinvestav.jpg"
+                                alt="Cinvestav"></div>
+                        <div class="sponsor-item"><img
+                                src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_DCA.jpg"
+                                alt="DCA"></div>
+                        <div class="sponsor-item"><img
+                                src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_VLI.png"
+                                alt="RedLate"></div>
+                        <div class="sponsor-item"><img
+                                src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_VI.png"
+                                alt="RedLate"></div>
+                        <div class="sponsor-item"><img
+                                src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_CopaBotMX.png"
+                                alt="RedLate"></div>
+                        <div class="sponsor-item"><img
+                                src="https://investigacion.lasalle.mx/wp-content/uploads/2026/03/Logo_RedLate.png"
+                                alt="RedLate"></div>
+
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container footer-content">
+                    <div class="footer-logo">
+                        <h3>CCRS 2026</h3>
+                    </div>
+                    <p>© 2026 Summer School on Control of Complex Robotic Systems. All rights reserved.</p>
+                </div>
+            </footer>
+            <footer id="footer" class=" footer-dark ">
+                <div id="pageFooterCon" class="pageFooterCon clearfix amz-custom-footer-layout amz-footer-fl-4-4-4">
+                    <div id="pageFooter" class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div id="custom_html-4" class="widget_text widget widget_custom_html clearfix">
+                                    <div class="textwidget custom-html-widget">
+                                        <style type='text/css'></style>
+                                        <div class="row" style="padding: 20px;">
+                                            <div class="col-12" style="margin-bottom: 20px;">
+                                                <a href="https://investigacion.lasalle.mx/">
+                                                    <img src="https://investigacion.lasalle.mx/wp-content/uploads/2021/07/HEADER-LASALLE-VI.png"
+                                                        alt="Universidad La Salle" class="img-responsive"
+                                                        style="max-width: 410px;">
+                                                </a>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <p class="direccionFooter">
+                                                    Benjamín Franklin 45, Col. Condesa, C.P. 06140,<br>México, Ciudad de
+                                                    México
+                                                    <br>
+                                                    Tel. +52 (55) 5278-9500
+                                                </p>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <a href="http://www.lasalle.mx/terminos-y-condiciones/" target="_blank">
+                                                    Términos y Condiciones
+                                                </a>
+                                            </div>
+                                            <div class="col-6">
+                                                <a href="http://www.lasalle.mx/privacidad/" target="_blank">
+                                                    Aviso de privacidad
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div id="custom_html-2" class="widget_text widget widget_custom_html clearfix">
+                                    <div class="textwidget custom-html-widget">
+                                        <style type='text/css'></style>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="siguenos">
+                                                    <figure id="siguenos"></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 redesSociales">
+                                                <figure id="facebook">
+                                                    <a href="https://www.facebook.com/LaSalleMX" target="_blank">. </a>
+                                                </figure>
+                                                <figure id="youtubesig">
+                                                    <a href="https://www.youtube.com/user/LaSalleMX" target="_blank">.
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div id="custom_html-3" class="widget_text widget widget_custom_html clearfix">
+                                    <div class="textwidget custom-html-widget">
+                                        <style type='text/css'></style>
+                                        <div class="row" style="padding: 20px;">
+                                            <div class="col-12">
+                                                <p class="direccionFooter">
+                                                    Profesionales con Valor
+                                                </p>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <a href="http://ialu.org/english/" target="_blank">
+                                                    <img src="https://investigacion.lasalle.mx/wp-content/uploads/2017/11/LaSalleUniv.png"
+                                                        alt="La Salle Universities" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6" style="margin-bottom: 20px;">
+                                                <a href="http://redlasalle.mx/" target="_blank">
+                                                    <img src="https://investigacion.lasalle.mx/wp-content/uploads/2017/11/Footer_Logo_RedLaSalle.png "
+                                                        alt="La Salle red de universidades" class="img-responsive">
+                                                </a>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <a href="http://delasalle.ulsa.edu.mx/universidad_segura/"
+                                                    target="_blank">
+                                                    <img src="https://investigacion.lasalle.mx/wp-content/uploads/2024/06/La-Salle-Universidad-Segura-1.png"
+                                                        alt="Universidad La Salle" class="img-responsive"
+                                                        style="max-height: 65px;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Copyright -->
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="copyright row">
+
+                            <div class="col-md-12">
+                                <div class="header-elem">
+                                    <p class="copyright-text">© Universidad La Salle A.C. 2024 Todos los derechos
+                                        Reservados.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // 1. LÓGICA DE NAVEGACIÓN (Ocultar y Mostrar)
+                        const allSections = document.querySelectorAll('section.section'); // Incluimos todas las secciones normalmente
+                        const navLinks = document.querySelectorAll('.nav-links li a');
+                        const navbar = document.querySelector('.navbar');
+
+                        function showSection(targetId) {
+                            if (targetId === 'home') {
+                                // Si tocan Home, ocultamos todo el contenido y subimos a la portada
+                                allSections.forEach(sec => sec.classList.add('spa-hidden'));
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            } else {
+                                // Ocultamos todas las secciones de contenido
+                                allSections.forEach(sec => sec.classList.add('spa-hidden'));
+
+                                // Mostramos SOLO a la que le dieron clic
+                                const targetElement = document.getElementById(targetId);
+                                if (targetElement) {
+                                    targetElement.classList.remove('spa-hidden');
+                                }
+
+                                // Hacemos scroll suave para que la barra quede arriba y puedan leer el contenido
+                                window.scrollTo({ top: navbar.offsetTop, behavior: 'smooth' });
+                            }
+
+                            // Cambiamos el color al botón activo
+                            navLinks.forEach(a => {
+                                a.classList.remove('active');
+                                if (a.getAttribute('href') === '#' + targetId) {
+                                    a.classList.add('active');
+                                }
+                            });
+                        }
+
+                        // Escuchar clics en el menú
+                        navLinks.forEach(link => {
+                            link.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                const targetId = this.getAttribute('href').substring(1);
+                                showSection(targetId);
+                            });
+                        });
+
+                        // Hacer que el botón de "View Schedule" en la portada también funcione
+                        const viewScheduleBtn = document.querySelector('a[href="#schedule"].btn-primary');
+                        if (viewScheduleBtn) {
+                            viewScheduleBtn.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                showSection('schedule');
+                            });
+                        }
+
+                        // Iniciar página mostrando solo la portada
+                        showSection('home');
+
+                        // 2. FUNCIONALIDAD DE LAS PESTAÑAS (Tabs de Horarios - Se mantiene igual)
+                        const tabBtns = document.querySelectorAll('.tab-btn');
+                        const daySchedules = document.querySelectorAll('.day-schedule');
+
+                        if (tabBtns.length > 0 && daySchedules.length > 0) {
+                            tabBtns.forEach(btn => {
+                                btn.addEventListener('click', function () {
+                                    tabBtns.forEach(b => b.classList.remove('active'));
+                                    daySchedules.forEach(s => s.classList.remove('active'));
+                                    this.classList.add('active');
+
+                                    const targetId = this.getAttribute('data-day');
+                                    const targetSchedule = document.getElementById(targetId);
+                                    if (targetSchedule) targetSchedule.classList.add('active');
+                                });
+                            });
+                        }
+
+                        // 3. MENÚ MÓVIL
+                        const menuToggle = document.querySelector('.menu-toggle');
+                        const navContainerLinks = document.querySelector('.nav-links');
+
+                        if (menuToggle && navContainerLinks) {
+                            menuToggle.addEventListener('click', function () {
+                                navContainerLinks.classList.toggle('active');
+                            });
+
+                            // Cerrar el menú móvil al presionar una opción
+                            navLinks.forEach(link => {
+                                link.addEventListener('click', () => {
+                                    navContainerLinks.classList.remove('active');
+                                });
+                            });
+                        }
                     });
-                });
-            }
+                </script>
 
-            // 3. MENÚ MÓVIL
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navContainerLinks = document.querySelector('.nav-links');
-            
-            if (menuToggle && navContainerLinks) {
-                menuToggle.addEventListener('click', function() {
-                    navContainerLinks.classList.toggle('active');
-                });
-                
-                // Cerrar el menú móvil al presionar una opción
-                navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        navContainerLinks.classList.remove('active');
-                    });
-                });
-            }
-        });
-    </script>
 </body>
+
 </html>
