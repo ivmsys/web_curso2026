@@ -1,16 +1,25 @@
-
 /* RESTABLECER ELEMENTOS GENERICOS DE WP DENTRO DEL CONTENEDOR */
 #ccrs-wrapper {
     background-color: transparent !important;
 }
-#ccrs-wrapper p, #ccrs-wrapper h1, #ccrs-wrapper h2, #ccrs-wrapper h3, #ccrs-wrapper h4, #ccrs-wrapper a, #ccrs-wrapper span, #ccrs-wrapper div {
+
+#ccrs-wrapper p,
+#ccrs-wrapper h1,
+#ccrs-wrapper h2,
+#ccrs-wrapper h3,
+#ccrs-wrapper h4,
+#ccrs-wrapper a,
+#ccrs-wrapper span,
+#ccrs-wrapper div {
     margin: 0;
     padding: 0;
     line-height: normal;
 }
+
 #ccrs-wrapper p {
     margin-bottom: 20px !important;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
@@ -182,14 +191,21 @@ h3,
 }
 
 /* Forzar color blanco en los textos del hero contra las hojas de estilo externas */
-#ccrs-wrapper .hero p, #ccrs-wrapper .hero span, #ccrs-wrapper .hero i, #ccrs-wrapper .hero strong {
+#ccrs-wrapper .hero p,
+#ccrs-wrapper .hero span,
+#ccrs-wrapper .hero i,
+#ccrs-wrapper .hero strong {
     color: var(--white) !important;
     font-family: 'Outfit', sans-serif !important;
 }
 
 /* Forzar que el pie de página institucional de La Salle y el encabezado principal sean azules */
-#masthead, .header-wrap, .amz-header, .header,
-#ccrs-wrapper #footer, #ccrs-wrapper .footer-dark {
+#masthead,
+.header-wrap,
+.amz-header,
+.header,
+#ccrs-wrapper #footer,
+#ccrs-wrapper .footer-dark {
     background-color: var(--primary-color) !important;
 }
 
@@ -199,7 +215,7 @@ h3,
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('hero.png') center/cover no-repeat;
+    background: url('https://investigacion.lasalle.mx/wp-content/uploads/2026/03/hero.png') center/cover no-repeat;
     opacity: 0.3;
     z-index: 1;
 }
@@ -266,8 +282,10 @@ h3,
 }
 
 #ccrs-wrapper .section p {
-    font-size: 1.35rem !important; /* Increased font size + enforced */
-    font-family: 'Outfit', sans-serif !important; /* Changed font family as requested */
+    font-size: 1.35rem !important;
+    /* Increased font size + enforced */
+    font-family: 'Outfit', sans-serif !important;
+    /* Changed font family as requested */
 }
 
 #ccrs-wrapper .section-header {
@@ -297,7 +315,8 @@ h3,
 }
 
 #ccrs-wrapper .about-content p {
-    font-size: 1.45rem !important; /* Increased base size for about + enforced */
+    font-size: 1.45rem !important;
+    /* Increased base size for about + enforced */
     font-family: 'Outfit', sans-serif !important;
     color: var(--text-light) !important;
     margin-bottom: 20px;
@@ -698,7 +717,8 @@ h3,
     font-size: 0.9rem;
 }
 
-#ccrs-wrapper .footer h3, #ccrs-wrapper .footer p {
+#ccrs-wrapper .footer h3,
+#ccrs-wrapper .footer p {
     color: var(--white) !important;
 }
 
@@ -713,13 +733,13 @@ h3,
 
 /* Media Queries */
 @media (max-width: 1024px) {
-#ccrs-wrapper .hero-title {
+    #ccrs-wrapper .hero-title {
         font-size: 2.8rem;
     }
 }
 
 @media (max-width: 768px) {
-#ccrs-wrapper .nav-links {
+    #ccrs-wrapper .nav-links {
         display: none;
         position: absolute;
         top: 100%;
@@ -734,75 +754,75 @@ h3,
         z-index: 100;
     }
 
-#ccrs-wrapper .nav-links.active {
+    #ccrs-wrapper .nav-links.active {
         display: flex;
     }
 
-#ccrs-wrapper .nav-links li {
+    #ccrs-wrapper .nav-links li {
         margin: 10px 0;
     }
 
-#ccrs-wrapper .menu-toggle {
+    #ccrs-wrapper .menu-toggle {
         display: block;
     }
 
     .about-grid,
     .venue-content,
-#ccrs-wrapper .speaker-profile {
+    #ccrs-wrapper .speaker-profile {
         grid-template-columns: 1fr;
         flex-direction: column;
         gap: 30px;
         text-align: center;
     }
 
-#ccrs-wrapper .hero-title {
+    #ccrs-wrapper .hero-title {
         font-size: 2.2rem;
     }
 
     .about-content p,
     .speaker-bio,
-#ccrs-wrapper .abstract-content {
+    #ccrs-wrapper .abstract-content {
         text-align: left;
     }
 
-#ccrs-wrapper .speaker-profile {
+    #ccrs-wrapper .speaker-profile {
         padding: 30px;
     }
 
-#ccrs-wrapper .timeline-item {
+    #ccrs-wrapper .timeline-item {
         flex-direction: column;
         gap: 10px;
         padding-left: 25px;
         padding-bottom: 30px;
     }
 
-#ccrs-wrapper .timeline-item::before {
+    #ccrs-wrapper .timeline-item::before {
         left: -9px;
     }
 
-#ccrs-wrapper .timeline-item .time {
+    #ccrs-wrapper .timeline-item .time {
         flex: none;
         font-size: 0.9rem;
         margin-bottom: 5px;
     }
 
-#ccrs-wrapper .tab-btn {
+    #ccrs-wrapper .tab-btn {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
 
-#ccrs-wrapper .abstract-content {
+    #ccrs-wrapper .abstract-content {
         flex-direction: column;
         gap: 20px;
         align-items: center;
     }
 
-#ccrs-wrapper .abstract-image {
+    #ccrs-wrapper .abstract-image {
         flex: none;
         max-width: 100px;
     }
 
-#ccrs-wrapper .organizers-grid {
+    #ccrs-wrapper .organizers-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -815,10 +835,12 @@ h3,
     font-family: 'Outfit', sans-serif !important;
 }
 
-#ccrs-wrapper p.hero-limit-note, #ccrs-wrapper .hero p.hero-limit-note {
+#ccrs-wrapper p.hero-limit-note,
+#ccrs-wrapper .hero p.hero-limit-note {
     margin-top: 15px;
     font-size: 1.8rem !important;
-    color: #ff3333 !important; /* Brighter red than accent for white background contrast */
+    color: #ff3333 !important;
+    /* Brighter red than accent for white background contrast */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
     font-weight: 700;
     font-style: italic;
