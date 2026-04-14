@@ -96,6 +96,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         otherDetail.removeAttribute('open');
                     }
                 });
+
+                setTimeout(() => {
+                    const navbarHeight = navbar ? navbar.offsetHeight : 0;
+                    const y = this.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }, 10);
             }
         });
     });
