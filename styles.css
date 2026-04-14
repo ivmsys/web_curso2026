@@ -1,3 +1,19 @@
+
+/* RESTABLECER ELEMENTOS GENERICOS DE WP DENTRO DEL CONTENEDOR */
+#ccrs-wrapper {
+    background-color: transparent !important;
+}
+#ccrs-wrapper p, #ccrs-wrapper h1, #ccrs-wrapper h2, #ccrs-wrapper h3, #ccrs-wrapper h4, #ccrs-wrapper a, #ccrs-wrapper span, #ccrs-wrapper div {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+#ccrs-wrapper p {
+    margin-bottom: 20px !important;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
 :root {
     --primary-color: #002F5F;
     /* Azul La Salle */
@@ -15,14 +31,14 @@
     --transition: all 0.3s ease;
 }
 
-* {
+#ccrs-wrapper * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-body {
+#ccrs-wrapper {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
@@ -34,29 +50,29 @@ body {
 h1,
 h2,
 h3,
-h4 {
+#ccrs-wrapper h4 {
     font-family: 'Outfit', sans-serif;
     color: var(--primary-color);
     font-weight: 700;
 }
 
-a {
+#ccrs-wrapper a {
     text-decoration: none;
     color: inherit;
     transition: var(--transition);
 }
 
-ul {
+#ccrs-wrapper ul {
     list-style: none;
 }
 
-.container {
+#ccrs-wrapper .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.btn {
+#ccrs-wrapper .btn {
     display: inline-block;
     padding: 12px 24px;
     border-radius: 50px;
@@ -67,31 +83,31 @@ ul {
     transition: var(--transition);
 }
 
-.btn-primary {
+#ccrs-wrapper .btn-primary {
     background-color: var(--accent-color);
     color: var(--white);
     border: 2px solid var(--accent-color);
 }
 
-.btn-primary:hover {
+#ccrs-wrapper .btn-primary:hover {
     background-color: #b30029;
     border-color: #b30029;
 }
 
-.btn-secondary {
+#ccrs-wrapper .btn-secondary {
     background-color: transparent;
     color: var(--white);
     border: 2px solid var(--white);
     margin-left: 10px;
 }
 
-.btn-secondary:hover {
+#ccrs-wrapper .btn-secondary:hover {
     background-color: var(--white);
     color: var(--primary-color);
 }
 
 
-.navbar {
+#ccrs-wrapper .navbar {
     background-color: rgba(255, 255, 255, 0.98);
     position: sticky;
     /* MAGIA: Se queda pegada al tocar el tope de la pantalla */
@@ -103,7 +119,7 @@ ul {
     padding: 15px 0;
 }
 
-.nav-container {
+#ccrs-wrapper .nav-container {
     display: flex;
     justify-content: center;
     /* Centra los botones horizontalmente */
@@ -112,18 +128,18 @@ ul {
 }
 
 /* Ocultamos el logo de la barra inferior para que sea un menú limpio */
-.navbar .logo {
+#ccrs-wrapper .navbar .logo {
     display: none;
 }
 
-.nav-links {
+#ccrs-wrapper .nav-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-.nav-links li a {
+#ccrs-wrapper .nav-links li a {
     font-weight: 600;
     font-size: 1.25rem !important;
     font-family: 'Outfit', sans-serif !important;
@@ -136,12 +152,12 @@ ul {
 }
 
 .nav-links li a:hover,
-.nav-links li a.active {
+#ccrs-wrapper .nav-links li a.active {
     background-color: var(--accent-color);
     color: var(--white) !important;
 }
 
-.menu-toggle {
+#ccrs-wrapper .menu-toggle {
     display: none;
     background: none;
     border: none;
@@ -154,7 +170,7 @@ ul {
 }
 
 /* Hero */
-.hero {
+#ccrs-wrapper .hero {
     height: 100vh;
     min-height: 600px;
     background: linear-gradient(135deg, var(--primary-color) 0%, #001833 100%);
@@ -166,18 +182,18 @@ ul {
 }
 
 /* Forzar color blanco en los textos del hero contra las hojas de estilo externas */
-.hero p, .hero span, .hero i, .hero strong {
+#ccrs-wrapper .hero p, #ccrs-wrapper .hero span, #ccrs-wrapper .hero i, #ccrs-wrapper .hero strong {
     color: var(--white) !important;
     font-family: 'Outfit', sans-serif !important;
 }
 
 /* Forzar que el pie de página institucional de La Salle y el encabezado principal sean azules */
 #masthead, .header-wrap, .amz-header, .header,
-#footer, .footer-dark {
+#ccrs-wrapper #footer, #ccrs-wrapper .footer-dark {
     background-color: var(--primary-color) !important;
 }
 
-.hero-overlay {
+#ccrs-wrapper .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -188,25 +204,25 @@ ul {
     z-index: 1;
 }
 
-.hero-content {
+#ccrs-wrapper .hero-content {
     position: relative;
     z-index: 2;
     width: 100%;
 }
 
-.hero-logos {
+#ccrs-wrapper .hero-logos {
     margin-bottom: 20px;
     font-weight: 600;
     letter-spacing: 1px;
     opacity: 0.9;
 }
 
-.divider {
+#ccrs-wrapper .divider {
     margin: 0 10px;
     opacity: 0.6;
 }
 
-.hero-title {
+#ccrs-wrapper .hero-title {
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 30px;
@@ -214,7 +230,7 @@ ul {
     color: #fff;
 }
 
-.hero-subtitle {
+#ccrs-wrapper .hero-subtitle {
     color: var(--accent-color);
     margin-bottom: 10px;
     letter-spacing: 1.5px;
@@ -226,7 +242,7 @@ ul {
 .hero-department,
 .hero-location,
 .hero-dates,
-.hero-onsite {
+#ccrs-wrapper .hero-onsite {
     font-size: 1.6rem !important;
     font-family: 'Outfit', sans-serif !important;
     margin-bottom: 10px;
@@ -236,35 +252,35 @@ ul {
     gap: 10px;
 }
 
-.hero-cta {
+#ccrs-wrapper .hero-cta {
     margin-top: 40px;
 }
 
 /* Sections */
-.section {
+#ccrs-wrapper .section {
     padding: 80px 0;
 }
 
-.section-light {
+#ccrs-wrapper .section-light {
     background-color: var(--bg-light);
 }
 
-.section p {
+#ccrs-wrapper .section p {
     font-size: 1.35rem !important; /* Increased font size + enforced */
     font-family: 'Outfit', sans-serif !important; /* Changed font family as requested */
 }
 
-.section-header {
+#ccrs-wrapper .section-header {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.section-header h2 {
+#ccrs-wrapper .section-header h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.underline {
+#ccrs-wrapper .underline {
     width: 60px;
     height: 4px;
     background-color: var(--accent-color);
@@ -273,14 +289,14 @@ ul {
 }
 
 /* About & Highlights */
-.about-grid {
+#ccrs-wrapper .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
 }
 
-.about-content p {
+#ccrs-wrapper .about-content p {
     font-size: 1.45rem !important; /* Increased base size for about + enforced */
     font-family: 'Outfit', sans-serif !important;
     color: var(--text-light) !important;
@@ -288,12 +304,12 @@ ul {
     text-align: justify;
 }
 
-.about-highlights {
+#ccrs-wrapper .about-highlights {
     display: grid;
     gap: 20px;
 }
 
-.highlight-card {
+#ccrs-wrapper .highlight-card {
     background: var(--white);
     padding: 25px;
     border-radius: var(--border-radius);
@@ -302,23 +318,23 @@ ul {
     transition: var(--transition);
 }
 
-.highlight-card:hover {
+#ccrs-wrapper .highlight-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
-.highlight-card i {
+#ccrs-wrapper .highlight-card i {
     font-size: 2.5rem;
     color: var(--accent-color);
     margin-bottom: 15px;
 }
 
-.highlight-card h4 {
+#ccrs-wrapper .highlight-card h4 {
     margin-bottom: 10px;
 }
 
 /* Speaker */
-.speaker-profile {
+#ccrs-wrapper .speaker-profile {
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -329,13 +345,13 @@ ul {
     box-shadow: var(--shadow-lg);
 }
 
-.speaker-image-container {
+#ccrs-wrapper .speaker-image-container {
     flex: 0 0 300px;
     display: flex;
     justify-content: center;
 }
 
-.speaker-img {
+#ccrs-wrapper .speaker-img {
     width: 100%;
     max-width: 300px;
     border-radius: var(--border-radius);
@@ -343,24 +359,24 @@ ul {
     object-fit: cover;
 }
 
-.speaker-info {
+#ccrs-wrapper .speaker-info {
     flex: 1;
 }
 
-.speaker-title {
+#ccrs-wrapper .speaker-title {
     color: var(--accent-color);
     font-weight: 600;
     margin-bottom: 20px;
     font-size: 1.1rem;
 }
 
-.speaker-bio {
+#ccrs-wrapper .speaker-bio {
     color: var(--text-light);
     text-align: justify;
 }
 
 /* Schedule Tabs */
-.schedule-tabs {
+#ccrs-wrapper .schedule-tabs {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -368,7 +384,7 @@ ul {
     flex-wrap: wrap;
 }
 
-.tab-btn {
+#ccrs-wrapper .tab-btn {
     padding: 12px 30px;
     border: 2px solid var(--primary-color);
     background: transparent;
@@ -382,25 +398,25 @@ ul {
 }
 
 .tab-btn.active,
-.tab-btn:hover {
+#ccrs-wrapper .tab-btn:hover {
     background-color: var(--primary-color);
     color: var(--white);
 }
 
-.schedule-content {
+#ccrs-wrapper .schedule-content {
     max-width: 900px;
     margin: 0 auto;
 }
 
-.day-schedule {
+#ccrs-wrapper .day-schedule {
     display: none;
 }
 
-.day-schedule.active {
+#ccrs-wrapper .day-schedule.active {
     display: block;
 }
 
-.timeline-item {
+#ccrs-wrapper .timeline-item {
     display: flex;
     gap: 30px;
     border-left: 3px solid #e5e7eb;
@@ -409,7 +425,7 @@ ul {
     position: relative;
 }
 
-.timeline-item::before {
+#ccrs-wrapper .timeline-item::before {
     content: '';
     position: absolute;
     left: -9px;
@@ -421,15 +437,15 @@ ul {
     border: 3px solid var(--white);
 }
 
-.timeline-item.lecture::before {
+#ccrs-wrapper .timeline-item.lecture::before {
     background-color: var(--primary-color);
 }
 
-.timeline-item.event::before {
+#ccrs-wrapper .timeline-item.event::before {
     background-color: var(--accent-color);
 }
 
-.timeline-item .time {
+#ccrs-wrapper .timeline-item .time {
     flex: 0 0 120px;
     font-weight: 700;
     color: var(--primary-color);
@@ -437,13 +453,13 @@ ul {
     font-family: 'Outfit', sans-serif !important;
 }
 
-.timeline-item .content h4 {
+#ccrs-wrapper .timeline-item .content h4 {
     margin-bottom: 5px;
     font-size: 1.45rem !important;
     font-family: 'Outfit', sans-serif !important;
 }
 
-.tag {
+#ccrs-wrapper .tag {
     display: inline-block;
     padding: 4px 12px;
     border-radius: 12px;
@@ -455,12 +471,12 @@ ul {
     margin-bottom: 8px;
 }
 
-.event-tag {
+#ccrs-wrapper .event-tag {
     background-color: #fce7f3;
     color: #9d174d;
 }
 
-.timezone-note {
+#ccrs-wrapper .timezone-note {
     text-align: center;
     color: var(--text-light);
     margin-bottom: 20px;
@@ -468,7 +484,7 @@ ul {
 }
 
 /* Abstracts */
-.abstracts-list {
+#ccrs-wrapper .abstracts-list {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
@@ -476,7 +492,7 @@ ul {
     gap: 20px;
 }
 
-.abstract-item {
+#ccrs-wrapper .abstract-item {
     background: var(--white);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
@@ -484,7 +500,7 @@ ul {
     overflow: hidden;
 }
 
-.abstract-item summary {
+#ccrs-wrapper .abstract-item summary {
     padding: 20px;
     cursor: pointer;
     display: flex;
@@ -497,24 +513,24 @@ ul {
     font-family: 'Outfit', sans-serif !important;
 }
 
-.abstract-item summary::-webkit-details-marker {
+#ccrs-wrapper .abstract-item summary::-webkit-details-marker {
     display: none;
 }
 
-.abstract-item summary i {
+#ccrs-wrapper .abstract-item summary i {
     transition: var(--transition);
     color: var(--accent-color);
 }
 
-.abstract-item[open] summary i {
+#ccrs-wrapper .abstract-item[open] summary i {
     transform: rotate(180deg);
 }
 
-.abstract-item summary:hover {
+#ccrs-wrapper .abstract-item summary:hover {
     background-color: rgba(0, 47, 95, 0.03);
 }
 
-.abstract-content {
+#ccrs-wrapper .abstract-content {
     padding: 30px;
     color: var(--text-light);
     border-top: 1px solid #e5e7eb;
@@ -524,7 +540,7 @@ ul {
     align-items: flex-start;
 }
 
-.abstract-image {
+#ccrs-wrapper .abstract-image {
     flex: 0 0 150px;
     width: 150px;
     height: auto;
@@ -533,7 +549,7 @@ ul {
     object-fit: cover;
 }
 
-.lecture-id {
+#ccrs-wrapper .lecture-id {
     color: var(--accent-color);
     font-weight: 700;
     margin-right: 15px;
@@ -542,7 +558,7 @@ ul {
 }
 
 /* Organizers */
-.organizers-grid {
+#ccrs-wrapper .organizers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
@@ -550,7 +566,7 @@ ul {
     margin: 0 auto;
 }
 
-.organizer-card {
+#ccrs-wrapper .organizer-card {
     background: var(--white);
     padding: 30px;
     border-radius: var(--border-radius);
@@ -562,12 +578,12 @@ ul {
     transition: var(--transition);
 }
 
-.organizer-card:hover {
+#ccrs-wrapper .organizer-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
-.organizer-img-container {
+#ccrs-wrapper .organizer-img-container {
     width: 150px;
     height: 150px;
     margin-bottom: 20px;
@@ -577,58 +593,58 @@ ul {
     box-shadow: var(--shadow-sm);
 }
 
-.organizer-img {
+#ccrs-wrapper .organizer-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.organizer-info h3 {
+#ccrs-wrapper .organizer-info h3 {
     font-size: 1.2rem;
     margin-bottom: 5px;
 }
 
-.organizer-title {
+#ccrs-wrapper .organizer-title {
     color: var(--accent-color);
     font-weight: 600;
     margin-bottom: 15px;
     font-size: 0.95rem;
 }
 
-.organizer-email {
+#ccrs-wrapper .organizer-email {
     font-size: 0.9rem;
 }
 
-.organizer-email a:hover {
+#ccrs-wrapper .organizer-email a:hover {
     color: var(--accent-color);
 }
 
 /* Venue & Contact */
-.venue-content {
+#ccrs-wrapper .venue-content {
     display: flex;
     gap: 40px;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.venue-info {
+#ccrs-wrapper .venue-info {
     flex: 1;
     min-width: 300px;
 }
 
-.venue-building-img {
+#ccrs-wrapper .venue-building-img {
     width: 100%;
     border-radius: var(--border-radius);
     margin-bottom: 20px;
     box-shadow: var(--shadow-md);
 }
 
-.venue-info h3 {
+#ccrs-wrapper .venue-info h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
-.venue-detail {
+#ccrs-wrapper .venue-detail {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -636,13 +652,13 @@ ul {
     margin-bottom: 8px;
 }
 
-.venue-detail i {
+#ccrs-wrapper .venue-detail i {
     color: var(--primary-color);
     width: 20px;
     text-align: center;
 }
 
-.venue-map {
+#ccrs-wrapper .venue-map {
     flex: 1.2;
     min-width: 300px;
     box-shadow: var(--shadow-lg);
@@ -651,7 +667,7 @@ ul {
 }
 
 /* Sponsors */
-.sponsors-grid {
+#ccrs-wrapper .sponsors-grid {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -659,22 +675,22 @@ ul {
     gap: 50px;
 }
 
-.sponsor-item {
+#ccrs-wrapper .sponsor-item {
     transition: var(--transition);
 }
 
-.sponsor-item:hover {
+#ccrs-wrapper .sponsor-item:hover {
     transform: scale(1.05);
 }
 
-.sponsor-item img {
+#ccrs-wrapper .sponsor-item img {
     max-height: 100px;
     max-width: 200px;
     object-fit: contain;
 }
 
 /* Footer */
-.footer {
+#ccrs-wrapper .footer {
     background-color: var(--primary-color);
     color: var(--white) !important;
     padding: 50px 0;
@@ -682,28 +698,28 @@ ul {
     font-size: 0.9rem;
 }
 
-.footer h3, .footer p {
+#ccrs-wrapper .footer h3, #ccrs-wrapper .footer p {
     color: var(--white) !important;
 }
 
-.footer-logo h3 {
+#ccrs-wrapper .footer-logo h3 {
     color: var(--white);
     margin-bottom: 15px;
 }
 
-.footer-content p {
+#ccrs-wrapper .footer-content p {
     opacity: 0.8;
 }
 
 /* Media Queries */
 @media (max-width: 1024px) {
-    .hero-title {
+#ccrs-wrapper .hero-title {
         font-size: 2.8rem;
     }
 }
 
 @media (max-width: 768px) {
-    .nav-links {
+#ccrs-wrapper .nav-links {
         display: none;
         position: absolute;
         top: 100%;
@@ -718,80 +734,80 @@ ul {
         z-index: 100;
     }
 
-    .nav-links.active {
+#ccrs-wrapper .nav-links.active {
         display: flex;
     }
 
-    .nav-links li {
+#ccrs-wrapper .nav-links li {
         margin: 10px 0;
     }
 
-    .menu-toggle {
+#ccrs-wrapper .menu-toggle {
         display: block;
     }
 
     .about-grid,
     .venue-content,
-    .speaker-profile {
+#ccrs-wrapper .speaker-profile {
         grid-template-columns: 1fr;
         flex-direction: column;
         gap: 30px;
         text-align: center;
     }
 
-    .hero-title {
+#ccrs-wrapper .hero-title {
         font-size: 2.2rem;
     }
 
     .about-content p,
     .speaker-bio,
-    .abstract-content {
+#ccrs-wrapper .abstract-content {
         text-align: left;
     }
 
-    .speaker-profile {
+#ccrs-wrapper .speaker-profile {
         padding: 30px;
     }
 
-    .timeline-item {
+#ccrs-wrapper .timeline-item {
         flex-direction: column;
         gap: 10px;
         padding-left: 25px;
         padding-bottom: 30px;
     }
 
-    .timeline-item::before {
+#ccrs-wrapper .timeline-item::before {
         left: -9px;
     }
 
-    .timeline-item .time {
+#ccrs-wrapper .timeline-item .time {
         flex: none;
         font-size: 0.9rem;
         margin-bottom: 5px;
     }
 
-    .tab-btn {
+#ccrs-wrapper .tab-btn {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
 
-    .abstract-content {
+#ccrs-wrapper .abstract-content {
         flex-direction: column;
         gap: 20px;
         align-items: center;
     }
 
-    .abstract-image {
+#ccrs-wrapper .abstract-image {
         flex: none;
         max-width: 100px;
     }
 
-    .organizers-grid {
+#ccrs-wrapper .organizers-grid {
         grid-template-columns: 1fr;
     }
 }
 
-.hero-important-dates {
+#ccrs-wrapper .hero-important-dates {
     margin: 25px 0;
     font-size: 1.6rem !important;
     line-height: 1.4;
@@ -799,7 +815,7 @@ ul {
     font-family: 'Outfit', sans-serif !important;
 }
 
-p.hero-limit-note, .hero p.hero-limit-note {
+#ccrs-wrapper p.hero-limit-note, #ccrs-wrapper .hero p.hero-limit-note {
     margin-top: 15px;
     font-size: 1.8rem !important;
     color: #ff3333 !important; /* Brighter red than accent for white background contrast */
@@ -809,17 +825,17 @@ p.hero-limit-note, .hero p.hero-limit-note {
     font-family: 'Outfit', sans-serif !important;
 }
 
-body {
+#ccrs-wrapper {
     padding-top: 0px
 }
 
-.spa-hidden {
+#ccrs-wrapper .spa-hidden {
     display: none !important;
     /* Oculta por completo las secciones no activas */
 }
 
 /* Fix the school header color to match the official blue */
 .header-wrap.dark,
-.header-wrap.background-nav {
+#ccrs-wrapper .header-wrap.background-nav {
     background-color: var(--primary-color) !important;
 }
